@@ -1,3 +1,8 @@
+# Custom files to ignore
+ingersollthreefive/secret_settings.py
+db.sqlite3
+*.swp
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
