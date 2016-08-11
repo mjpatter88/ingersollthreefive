@@ -1,4 +1,37 @@
 /*Place custom css here*/
-#test_id {
-    color: red;
+body { 
+  background-color: white; 
+}
+
+h1{
+  position: absolute;
+  display: block;
+  margin-left: 17%;
+  margin-top: 28%;
+  font-size: 15em;
+  border: 10px gray solid;
+  padding: 30px;
+  color: gray;
+  width: 21%;
+  height: 6.5%;
+  z-index: 1;
+}
+.background-img {
+  width: 100%;
+  }
+
+.dog {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+
+#logo {
+  display: block;
+  position:absolute;
+  margin-left:35%;
+  width:30%;
+  margin-top: 35%;
+
 }

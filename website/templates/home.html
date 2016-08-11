@@ -19,13 +19,37 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div>
+      <image id="logo" src="../static/images/logo.svg" />
+      <image class="background-img" src="../static/images/BuildingDayBlurred.jpg" />
+    </div>
+    <div>
+      <image class="dog" src="../static/images/dog.png" />
+      <h1>Amenities</h1>
+      <image class="background-img" src="../static/images/dogbackground.png" />
+    </div>
+    <image class="background-img" src="../static/images/map.JPG" />
+    <image class="background-img" src="../static/images/phone.jpg" />
+    
 
-    <div id="test_id">Test our base.css file. This text should be red.</div>
+  
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+     <!-- jQuery (for scrolling) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+<script>
+$('.smooth').on('click', function() {
+    $.smoothScroll({
+        scrollElement: $('body'),
+        scrollTarget: '#' + this.id
+    });
+    
+    return false;
+});
+</script>
   </body>
 </html>
