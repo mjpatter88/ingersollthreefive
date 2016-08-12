@@ -5,15 +5,18 @@ body {
 
 h1{
   position: absolute;
+<<<<<<< HEAD
   display: block;
   margin-right: 17%;
+=======
+  margin-left: 17%;
+>>>>>>> origin/master
   margin-top: 28%;
-  font-size: 15em;
-  border: 10px gray solid;
-  padding: 30px;
+  font-size: 100%;
+  border: 2px gray solid;
+  padding: 2%;
   color: gray;
-  width: 21%;
-  height: 6.5%;
+
   z-index: 1;
   text-align: center;
   align-content: 
@@ -36,10 +39,28 @@ h1{
 
 }
 #logo {
-  display: block;
   position:absolute;
   margin-left:35%;
   width:30%;
-  margin-top: 35%;
+  margin-top: -20%;
 
+}
+
+#first-image {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+#second-image {
+  -webkit-clip-path: polygon(0% 30, 100% 0%, 100% 100%, 0% 85%);
+  margin-top: -15%;
+}
+
+#third-image {
+  -webkit-clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 100%);
+  margin-top: -70px;
+}
+
+#fourth-image {
+  -webkit-clip-path: polygon(0% 9%, 100% 0%, 100% 100%, 0% 100%);
+  margin-top: -9%;
 }
