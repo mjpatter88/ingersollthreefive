@@ -10,6 +10,8 @@
     <!-- Bootstrap -->
     <link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../static/base.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="../static/menu.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,32 +22,71 @@
     <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Athiti|Marvel|Pavanam|Raleway" rel="stylesheet">
   </head>
   <body>
-    <div>
-      <image class="background-img" src="../static/images/BuildingDayBlurred.jpg" />
-      <image id="logo" src="../static/images/logo.svg" />
+    
+    <div class="mobile-nav">
+      <div class="menu-btn">
+        <div></div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="responsive-menu">
+        <p id="menu"><b>MENU</b></p>
+        <p><a href="#home">home</a></p>
+        <p><a href="#location">location</a></p>
+        <p><a href="#amenities">amenities</a></p>
+        <p><a href="#contact">contact</a></p>  
+      </div>
     </div>
-    <div class="container-amenities">
-      <image class="background-img-dog" id="second-image" src="../static/images/dogbackground.png" />
-        <div>
-          <h1 id="header-amenities"> Amenities</h1>
-          <ul class="amenities">
+
+    <div class="wide-menu">
+        <p><a href="#home">home</a></p>
+        <p><a href="https://www.google.com/maps/place/541+35th+St,+Des+Moines,+IA+50312/@41.5852519,-93.6651916,19z/data=!4m5!3m4!1s0x87ee9ed4e6c6b1dd:0x6cc04cb5da90622e!8m2!3d41.585751!4d-93.6638119">location</a></p>
+        <p><a href="#amenities">amenities</a></p>
+        <p><a href="#contact">contact</a></p> 
+      </div>
+    
+    <div class="home">
+      <a name="home"></a>
+      <image class="background-img portrait" src="../static/images/BuildingDayBlurredportrait.jpg" />
+      <image class="background-img landscape" src="../static/images/BuildingDayBlurred.jpg" />
+      <div class="container" id="container-home">
+        <image id="logo" src="../static/images/logo.svg" />
+        <p>Modern living in Des Moines' historic district</p>
+        <h2>Leasing Spring 2017</h2>
+        <button type="button"><b>Join the Waiting List</b></button>
+        
+      </div>
+    </div>
+    
+    
+    <div class="amenities">
+      <a name="amenities"></a>
+      <image class="background-img portrait" id="second-image" src="../static/images/dogbackgroundportriat.png" />
+      <image class="background-img landscape" id="second-image" src="../static/images/dogbackground.png" />
+        <div class="container" id="container-amenities">
+          <h1>Amenities</h1>
+          <ul>
             <li>Pet Friendly</li>
             <li>On-Site Laundry</li>
             <li>Dishwasher</li>
             <li>Garbage disposal</li>
             <li>Surface Lot</li>
           </ul>
+        </div>
+      <image class="dog portrait" id="second-image" src="../static/images/dogportrait.png" />
+      <image class="dog landscape" id="second-image" src="../static/images/dog.png" />
     </div>
-      <image class="dog" id="second-image" src="../static/images/dog.png" /> 
-    </div>
-    <div>
-      <image class="map" id="third-image" src="../static/images/map2.jpg" />
-      <image class="background-img" id="third-image" src="../static/images/map.JPG" />
+    
+    <div class="contact">
+      <a name="contact"></a>
+      <image class="background-img portrait" id="third-image" src="../static/images/phoneportrait.JPG" />
+      <image class="background-img landscape" id="third-image" src="../static/images/phone.JPG" />
+      <div class="container" id="container-contact">
+      <div class="container" id="container-contact">
+        <h1>Contact Us</h1>
+        <p>541 35th St<br>Des Moines, IA 50312<br>Rally Cap Properties<br>515.999.5979<br>hello@rallycapproperties.com</p>
       </div>
-    <div class="container-contact">
-      <image class="background-img" id="fourth-image" src="../static/images/phone.jpg" />
-      <h1 id="header-contact">Contact Us</h1>
-      <p>Rally Cap Properties<br>515.999.5979<br>hello@rallycapproperties.com</p>
     </div>
 
   
@@ -56,7 +97,7 @@
     <script src="../static/bootstrap/js/bootstrap.min.js"></script>
      <!-- jQuery (for scrolling) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+<!--<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
 <script>
 $('.smooth').on('click', function() {
     $.smoothScroll({
@@ -66,6 +107,6 @@ $('.smooth').on('click', function() {
     
     return false;
 });
-</script>
+</script>-->
   </body>
 </html>

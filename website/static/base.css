@@ -1,113 +1,227 @@
-/*Place custom css here*/
+
 body { 
   background-color: white; 
 }
 
-h1{
-  position: absolute;
-  font-size: 1em;
-  border: 1px gray solid;
-  padding: .5%;
-  color: gray;
-  z-index: 1;
-  text-align: center; 
-  font-family: 'raleway',sans-serif;
+.wide-menu a:link, a:visited {
+  text-decoration: none;
+  color:white;
 }
 
-
-
-.amenities{
-  font-family:'marvel', sans-serif;
-  font-size: .5em;
-  position: absolute;
-  right:65%;
-  top: 45%;
-  color: gray;
-  z-index: 1;
-  text-align: left; 
+.wide-menu {
+  visibility: hidden;
+  position: fixed;
+  left: 5%;
+  top: 20px;
+  display: block; 
+  text-align: left;
+  font-family: "raleway", sans-serif;
+  font-size: 2em;
+  padding-top: 5px;
+  color: white;
+  z-index: 99;
 }
+
+.menu-btn {
+  position: fixed;
+  right: 10px;
+  top:2%;
+  width: 70px; 
+  z-index: 99;
+}
+
+.menu-btn div {
+	line-height: 1.2;
+	font-size: 18px;
+	font-weight: 200;
+	z-index: 99;
+}
+
+.menu-btn span {
+  display: block;
+	width: 19px;
+	height: 3px;
+	margin: 4px 40px;
+	background: rgb(150,150,150);
+	z-index: 99;
+  }
+
+#menu{
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: gray;
+  margin-bottom: 0;
+  padding: 10px;
+  color: gray;
+  background-color: whitesmoke;
+}
+
+.responsive-menu a:link, a:visited, p {
+  text-decoration: none;
+  color: gray;  
+}
+
+.responsive-menu p:hover{
+  background-color:whitesmoke;
+}
+.responsive-menu{
+  z-index: 98;
+  display: none;
+}
+
+.responsive-menu p {
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: gray;
+  margin-bottom: 0;
+  padding: 10px 0px 10px 15px;
+  color: gray;
+}
+
+.expand {
+	display: block; 
+  text-align: left;
+  font-family: "raleway", sans-serif;
+  font-size: 1.5em;
+  background-color: rgba(230,230,230,1);
+  position: fixed;
+  width:100%;
+}
+
 .background-img {
   width: 100%;
   }
 
-.background-img-dog {
-  width: 100.6%;
-  margin-left: -.2%;
-  z-index: 0;
-    
-  }
-
-.dog {
-  position: absolute;
-  width: 100.6%;
-  z-index: 2;
-  margin: 0;
-  top: 59%;
-  left:50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
-}
-
-.map {
-  position: absolute;
-  width: 100%;
-  z-index: 3;
-}
-
-.container-contact {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.container-contact p{
-  font-family:'marvel', sans-serif;
-  font-size: .5em;
-  position: absolute;
-  left:35%;
-  top: 0;
+h1{
+  display: inline-block;
+  font-size: 1.5em;
+  border: 1px gray solid;
   color: gray;
   z-index: 1;
-  text-align: left; 
+  text-align: center; 
+  font-family: 'raleway',sans-serif;
+  padding: 1%;
 }
 
-.container-amenities {
-  position: relative;
+.landscape{
+  display: none;
+}
+
+.portrait{
+  display: block;
+}
+
+.container{
+  position: absolute;
+  z-index: 1;  
+  padding: 0;
+}
+
+.home{
   width: 100%;
-  height: 100%;
-  -webkit-filter: sepia(20%);
+  position: relative;
+ }
+
+#container-home{
+  margin-top: -90%;
+  text-align: center;
+  font-family: 'pavanam', sans-serif;
+  display: block;
+  color: white;
 }
 
 #logo {
-  position:absolute;
-  margin-left:65%;
-  width:30%;
-  margin-top: -22%;
-
+  width: 80%;
 }
 
-#header-amenities {
-  right:62%;
-  top: 23%;
+#container-home p{
+  font-size: 1.1em;
+  color: white;
+ }
+
+#container-home h2{
+  font-size: 1em;
+  padding-top: 75px;
+ }
+
+button{
+  display: inline;
+  font-size: .8em;
+  background: rgba(0,0,0,0);
+  border: 1.7px solid white;
+  border-radius: 25px;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  
 }
 
-#header-contact {
-  left:60%;
-  top: -45%;
+.amenities {
+  position: relative;
+  width: 100%;
+  -webkit-filter: sepia(10%);
+  margin-top: -18%;
 }
 
-#second-image {
-  -webkit-clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 100%);
-  margin-top: -11%;
+.dog {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  top: 50%;
+  left:50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
-#third-image {
-  -webkit-clip-path: polygon(0% 35%, 100% 27%, 100% 100%, 0% 100%);
-  margin-top: -30%;
+#container-amenities{
+  top: 42%; 
+  right: 55%;
+  color: gray;
+}
+
+#container-amenities ul{
+  font-family:'marvel', sans-serif;
+  font-size: 1em;
+  color: gray;
+  z-index: 1;
+  text-align: left; 
+  padding-left: 22px;
+}
+
+
+.contact {
+  position: relative;
+  width: 100%;
+  margin-top: -20%;
   z-index: 3;
 }
 
+#container-contact{
+  left:45%;
+  top: 10%;
+  color: gray;
+  z-index: 1;
+}
+
+#container-contact p{
+  font-family:'marvel', sans-serif;
+  font-size: 1em;  
+  text-align: left; 
+  padding-left: 5px;
+}
+
+
+#second-image {
+  -webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
+}
+
+#third-image {
+  -webkit-clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
+  
+}
+
 #fourth-image {
-  -webkit-clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 110%, 100% 100%, 0% 100%);
   margin-top: -30%;
+
 }
