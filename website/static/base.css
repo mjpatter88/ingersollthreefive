@@ -22,28 +22,29 @@ body {
   z-index: 99;
 }
 
-.menu-btn {
+.mobile-nav{
+  background: whitesmoke;
   position: fixed;
-  right: 10px;
-  top:2%;
-  width: 70px; 
-  z-index: 99;
+  width: 100%; 
+  z-index: 98;
+  height: 50px;
 }
 
-.menu-btn div {
-	line-height: 1.2;
-	font-size: 18px;
-	font-weight: 200;
-	z-index: 99;
+.menu-btn{
+  position: absolute;
+  width: 19px;
+  padding:13px 6px 0px 0px;
+  right: 15px;
+  z-index: 99;
 }
 
 .menu-btn span {
   display: block;
 	width: 19px;
 	height: 3px;
-	margin: 4px 40px;
+	margin-top: 4px;
 	background: rgb(150,150,150);
-	z-index: 99;
+  
   }
 
 #menu{
@@ -174,8 +175,8 @@ button{
 }
 
 #container-amenities{
-  top: 42%; 
-  right: 55%;
+  top: 43%; 
+  right: 60%;
   color: gray;
 }
 
@@ -212,7 +213,7 @@ button{
 
 
 #second-image {
-  -webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 9%, 100% 100%, 0% 100%);
 }
 
 #third-image {
