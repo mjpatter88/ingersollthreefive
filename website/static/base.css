@@ -5,21 +5,25 @@ body {
 
 .wide-menu a:link, a:visited {
   text-decoration: none;
-  color:white;
+  color:darkred;
 }
 
 .wide-menu {
   visibility: hidden;
   position: fixed;
-  left: 5%;
+  left: 2%;
   top: 20px;
   display: block; 
   text-align: left;
   font-family: "raleway", sans-serif;
-  font-size: 2em;
-  padding-top: 5px;
-  color: white;
+  font-size: 1em;
+  color: darkred;
   z-index: 99;
+}
+
+.wide-menu p{
+  color:darkred;
+  margin: 0;
 }
 
 .mobile-nav{
@@ -58,8 +62,7 @@ body {
 }
 
 .responsive-menu a:link, a:visited, p {
-  text-decoration: none;
-  color: gray;  
+  text-decoration: none; 
 }
 
 .responsive-menu p:hover{
@@ -125,7 +128,11 @@ button{
   border-radius: 25px;
   padding-left: 10px;
   padding-right: 10px;
-  
+  font-family: 'pavanam',sans-serif;
+}
+
+button a:link, a:visited{
+  text-decoration: none;
 }
 
 .home{
@@ -139,6 +146,7 @@ button{
   font-family: 'pavanam', sans-serif;
   display: block;
   color: white;
+  width: 100%;
 }
 
 #logo {
@@ -216,7 +224,13 @@ button{
 }
 
 #container-contact button{
-    border: 1.7px solid gray;
+  border: 1.7px solid gray;
+  margin-top: 2px;
+  color:gray;
+}
+
+#container-contact > button > a:link, a:visited{
+  color: gray;
 }
 
 #second-image {
@@ -232,4 +246,145 @@ button{
   -webkit-clip-path: polygon(0% 0%, 100% 110%, 100% 100%, 0% 100%);
   margin-top: -30%;
 
+}
+
+@media only screen and (min-width : 385px){
+ button{
+    font-size: 1em;
+  }
+  
+  h1{
+    font-size: 1.7em;
+    padding: 3%;
+  }
+  
+  #container-home p{
+    font-size: 1.2em;
+ }
+
+  #container-home h2{
+    font-size: 1.3em; 
+ }
+  
+  #container-amenities ul {
+    font-size: 1.2em;
+  }
+  
+  #container-contact p{
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width : 465px){
+  button{
+    font-size: 1.1em;
+  }
+  
+  h1{
+    font-size: 2em;
+    padding: 3%;
+  }
+  
+  #container-home p{
+    font-size: 1.4em;
+ }
+
+  #container-home h2{
+    font-size: 1.4em;
+    padding-top: 90px;
+    margin-bottom: 10px;
+ }
+
+  #container-amenities{
+    top:44%;
+  }
+  
+  #container-amenities ul {
+    font-size: 1.4em;
+  }
+  
+  #container-contact p{
+    font-size: 1.4em;
+  }
+}
+  
+@media only screen and (min-width : 540px){
+  .wide-menu {
+  visibility: visible;
+  }
+  
+  .mobile-nav{
+    visibility: hidden;
+  }
+  
+  .portrait{
+    display: none;
+  }
+  
+  .landscape{
+    display: block;
+  }
+ 
+  
+  button{
+    font-size: 1.1em;
+  }
+  
+  h1{
+    font-size: 2em;
+    padding: 3%;
+  }
+  
+  #container-home{
+  margin-top: -50%;
+}
+  
+  #logo{
+    width: 60%;
+  }
+  
+  #container-home p{
+    font-size: 1.4em;
+ }
+
+  #container-home h2{
+    font-size: 1.4em;
+    padding-top: 20px;
+    margin-bottom: 10px;
+ }
+
+  .amenities{
+    margin-top: -8%;
+  }
+  
+  #container-amenities{
+    top:35%;
+    right:61%;
+  }
+  
+  #container-amenities ul {
+    font-size: 1.4em;
+  }
+  
+  .contact{
+    margin-top: -4.5%;
+  }
+  #container-contact p{
+    font-size: 1.4em;
+  }
+  
+  #second-image {
+  -webkit-clip-path: polygon(0% 0%, 100% 12%, 100% 100%, 0% 100%);
+  }
+
+#third-image {
+  -webkit-clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
+  
+  }
+
+#fourth-image {
+  -webkit-clip-path: polygon(0% 0%, 100% 110%, 100% 100%, 0% 100%);
+  margin-top: -30%;
+
+  }
 }
