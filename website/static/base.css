@@ -398,6 +398,48 @@ button a:link, a:visited{
   }
 }
 
+@media only screen and (min-width : 650px){
+ 
+  #container-amenities{
+    top:37%;
+  }
+
+  #container-contact{
+    left:34%;
+  }
+  
+  #container-contact-text{
+    float: right;
+    padding-left: 5%;
+    margin-top: 25%;
+  }
+  
+  #container-contact p{
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (min-width : 750px){
+ 
+  #container-amenities{
+    top:37%;
+  }
+
+  #container-contact{
+    left:34%;
+  }
+  
+  #container-contact-text{
+    float: right;
+    padding-left: 5%;
+    margin-top: 25%;
+  }
+  
+  #container-contact p{
+    font-size: 1.3em;
+  }
+}
+
 
 
 
