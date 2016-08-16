@@ -5,26 +5,24 @@ body {
 
 .wide-menu a:link, a:visited {
   text-decoration: none;
-  color:darkred;
+  color: gray;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .wide-menu {
   visibility: hidden;
   position: fixed;
-  left: 2%;
-  top: 20px;
-  display: block; 
-  text-align: left;
+  padding: 8px;
+  width: 100%; 
+  text-align: center;
   font-family: "raleway", sans-serif;
-  font-size: 1em;
-  color: darkred;
+  font-size: 1.2em;
+  color: gray;
+  background-color: whitesmoke;
   z-index: 99;
 }
 
-.wide-menu p{
-  color:darkred;
-  margin: 0;
-}
 
 .mobile-nav{
   background: whitesmoke;
@@ -230,7 +228,7 @@ button a:link, a:visited{
 }
 
 #container-contact > button > a:link, a:visited{
-  color: gray;
+  text-decoration: none;
 }
 
 #second-image {
@@ -336,7 +334,7 @@ button a:link, a:visited{
   }
   
   #container-home{
-  margin-top: -50%;
+  margin-top: -47%;
 }
   
   #logo{
@@ -350,7 +348,7 @@ button a:link, a:visited{
   #container-home h2{
     font-size: 1.4em;
     padding-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
  }
 
   .amenities{
@@ -369,8 +367,19 @@ button a:link, a:visited{
   .contact{
     margin-top: -4.5%;
   }
+  
+  #container-contact{
+    left:33%;
+  }
+  
+  #container-contact-text{
+    float: right;
+    padding-left: 5%;
+    margin-top: 25%;
+  }
+  
   #container-contact p{
-    font-size: 1.4em;
+    font-size: 1.1em;
   }
   
   #second-image {
@@ -388,3 +397,29 @@ button a:link, a:visited{
 
   }
 }
+
+
+
+
+
+
+
+
+
+
+/*.wide-menu {
+  visibility: hidden;
+  position: fixed;
+  left: 2%;
+  top: 20px;
+  display: block; 
+  text-align: left;
+  font-family: "raleway", sans-serif;
+  font-size: 1em;
+  color: darkred;
+  z-index: 99;
+}
+
+.wide-menu p{
+  margin: 0;
+}*/
