@@ -1,0 +1,20 @@
+#Location: /etc/systemd/system/gunicorn-superlists-<env>.service
+
+#Manual start: 'sudo systemctl start gunicorn-superplists-<env>.service
+#Status check: 'sudo systemctl status gunicorn-superlists-<env>.service
+#Enable autostart: 'sudo systemctl enable gunicorn-superlists-<env>.service
+
+[Unit]
+Description=Gunicorn daemon for SITENAME
+
+[Service]
+PIDFile=/tmp/SITENAME/pid
+Type=simple
+User=michael
+WorkingDirectory=/home/michael/sites/SITENAME/source/
+ExecStart=/home/michael/.pyenv/versions/SITENAME/bin/gunicorn --bind unix:/tmp/SITENAME.socket superlists.wsgi:application
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s TERM $MAINPID
+
+[Install]
+WantedBy=multi-user.target
