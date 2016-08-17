@@ -11,7 +11,7 @@ SITE_NAME = "ingersollthreefive"
 def provision():
     _install_deps()
     _provision_pyenv()
-    #_install_nginx()
+    _install_nginx()
 
 def _install_deps():
     dep_command = 'apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils'
@@ -31,6 +31,8 @@ def _provision_pyenv():
     if not exists('{}/versions/{}'.format(pyenv_dir, SITE_NAME)):
         run('{} virtualenv 3.5.2 {}'.format(pyenv_exe, SITE_NAME))
 
+    run('{}/versions/{}/bin/pip install --upgrade pip'.format(pyenv_dir, SITE_NAME))
+
 def _append_pyenv_bashrc():
     bashrc_file = '/home/{}/.bashrc'.format(env.user)
     append(bashrc_file, 'export PATH="/home/{}/.pyenv/bin:$PATH"'.format(env.user))
@@ -38,6 +40,9 @@ def _append_pyenv_bashrc():
     append(bashrc_file, 'eval "$(pyenv virtualenv-init -)"')
     run('source {}'.format(bashrc_file))
 
+def _install_nginx():
+    command = 'sudo apt-get install -y nginx'
+    sudo(command)
 
 
 def deploy():
@@ -53,9 +58,9 @@ def deploy():
     #_update_static_files(source_folder, virtual_env_folder)
     #_update_database(source_folder, virtual_env_folder)
 
-    #_deploy_nginx_if_neccessary(source_folder, site_name, env.host)
-    #_deploy_gunicorn_if_neccessary(source_folder, site_name)
-    #_restart_nginx()
+    _deploy_nginx_if_neccessary(source_folder, site_name, env.host)
+    _deploy_gunicorn_if_neccessary(source_folder, site_name)
+    _restart_nginx()
 
 def _create_directory_structure_if_neccessary(site_folder):
     for subfolder in ('database', 'static', 'source'):
