@@ -2,4 +2,5 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-	return HttpResponse("Hello Django. You're at the website index.")
+	# return HttpResponse("Hello Django. You're at the website index.")
+	return render(request, 'home.html')
