@@ -69,6 +69,7 @@ def _create_directory_structure_if_neccessary(site_folder):
 
 def _get_latest_source(source_folder):
     if exists(source_folder + '/.git'):
+        run('cd {} && git reset --hard'.format(source_folder))
         run('cd {} && git pull'.format(source_folder))
     else:
         run('git clone {} {}'.format(REPO_URL, source_folder))
