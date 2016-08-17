@@ -92,6 +92,7 @@ body {
 
 .background-img {
   width: 100%;
+  z-index: 1;
   }
 
 h1{
@@ -102,7 +103,7 @@ h1{
   z-index: 1;
   text-align: center; 
   font-family: 'raleway',sans-serif;
-  padding: 1%;
+  padding: 3px;
 }
 
 .landscape{
@@ -113,9 +114,9 @@ h1{
   display: block;
 }
 
-.container{
+.content-container{
   position: absolute;
-  z-index: 1;  
+  z-index: 2;  
   padding: 0;
 }
 
@@ -176,7 +177,7 @@ button a:link, a:visited{
 .dog {
   position: absolute;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   top: 50%;
   left:50%;
   margin-right: -50%;
@@ -253,7 +254,7 @@ button a:link, a:visited{
   
   h1{
     font-size: 1.7em;
-    padding: 3%;
+    padding: 6px;
   }
   
   #container-home p{
@@ -280,7 +281,6 @@ button a:link, a:visited{
   
   h1{
     font-size: 2em;
-    padding: 3%;
   }
   
   #container-home p{
@@ -328,10 +328,6 @@ button a:link, a:visited{
     font-size: 1.1em;
   }
   
-  h1{
-    font-size: 2em;
-    padding: 3%;
-  }
   
   #container-home{
   margin-top: -47%;
@@ -365,21 +361,23 @@ button a:link, a:visited{
   }
   
   .contact{
-    margin-top: -4.5%;
+    margin-top: -17.5%;
   }
   
   #container-contact{
-    left:33%;
+    left:32%;
+    top:22%;
   }
   
   #container-contact-text{
     float: right;
-    padding-left: 5%;
-    margin-top: 25%;
+    padding: 10px;
+    margin-top: 22%;
+    
   }
   
   #container-contact p{
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   
   #second-image {
@@ -387,14 +385,8 @@ button a:link, a:visited{
   }
 
 #third-image {
-  -webkit-clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 20%, 100% 15%, 100% 100%, 0% 100%);
   
-  }
-
-#fourth-image {
-  -webkit-clip-path: polygon(0% 0%, 100% 110%, 100% 100%, 0% 100%);
-  margin-top: -30%;
-
   }
 }
 
@@ -403,15 +395,9 @@ button a:link, a:visited{
   #container-amenities{
     top:37%;
   }
-
-  #container-contact{
-    left:34%;
-  }
   
-  #container-contact-text{
-    float: right;
-    padding-left: 5%;
-    margin-top: 25%;
+  #container-contact{
+    left:41%;
   }
   
   #container-contact p{
@@ -420,33 +406,129 @@ button a:link, a:visited{
 }
 
 @media only screen and (min-width : 750px){
- 
+  h1{
+    font-size: 2.3em;
+  }
+
+  #container-home{
+    margin-top: -40%;
+  }
+  
+  #logo{
+    width: 50%;
+  }
+  
+  #container-home h2{
+    margin-top: 40px;
+  }
+  
   #container-amenities{
     top:37%;
   }
-
+  
   #container-contact{
-    left:34%;
+    left:32%;
   }
   
-  #container-contact-text{
-    float: right;
-    padding-left: 5%;
-    margin-top: 25%;
-  }
-  
+}
+
+@media only screen and (min-width : 800px){
   #container-contact p{
-    font-size: 1.3em;
+    font-size: 1.4em;
+  }
+  
+}
+
+@media only screen and (min-width : 860px){
+  .wide-menu{
+    font-size: 1.5em;
+  }
+  
+  #container-amenities{
+    top: 39%;
+    right:62%;
   }
 }
 
+@media only screen and (min-width : 900px){
+   #container-home p{
+    font-size: 1.6em;
+ }
+  
+  #container-home h2{
+    font-size: 1.7em;
+    margin-top: 60px;
+ }
+  
+  #container-home button{
+    font-size: 1.2em;
+  }
+}
 
+@media only screen and (min-width : 1050px){
+  h1{
+    font-size: 2.7em;
+  }
+  
+  #container-home h2{
+    margin-top: 80px;
+ }
+  
+  #container-amenities ul{
+    font-size: 1.6em;
+    padding-left: 30px;
+  }
+}
 
+@media only screen and (min-width : 1150px){
+  h1{
+    font-size: 3.3em;
+  }
+  
+  #container-home h2{
+    margin-top: 100px;
+ }
+  
+  #container-amenities ul{
+    font-size: 1.7em;
+    padding-left: 40px;
+  }
+}
 
+@media only screen and (min-width : 1300px){
+  h1{
+    font-size: 4em;
+  }
+  #logo{
+    width: 40%;
+  }
+  
+  #container-home p{
+    font-size: 1.9em;
+  }
+  
+  #container-home h2{
+    font-size: 2.2em;
+    margin-top: 120px;
+    margin-bottom: 10px;
+  }
+  
+  #container-home button{
+    font-size: 1.7em;
+  }
+  
+  #container-amenities{
+    top:40%;
+  }
+  
+  #container-amenities ul{
+    font-size: 2.2em;
+  }
+}
 
-
-
-
+@media only screen and (min-width : 1500px){
+  
+}
 
 
 /*.wide-menu {
