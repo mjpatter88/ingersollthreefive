@@ -55,7 +55,7 @@ def deploy():
     _get_latest_source(source_folder)
     _update_settings(source_folder, env.host)
     _update_virtualenv(source_folder, env.user, virtual_env_folder, site_name)
-    #_update_static_files(source_folder, virtual_env_folder)
+    _update_static_files(source_folder, virtual_env_folder)
     #_update_database(source_folder, virtual_env_folder)
 
     _deploy_nginx_if_neccessary(source_folder, site_name, env.host)
