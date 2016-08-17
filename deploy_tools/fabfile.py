@@ -60,6 +60,7 @@ def deploy():
 
     _deploy_nginx_if_neccessary(source_folder, site_name, env.host)
     _deploy_gunicorn_if_neccessary(source_folder, site_name)
+    _restart_gunicorn(site_name)
     _restart_nginx()
 
 def _create_directory_structure_if_neccessary(site_folder):
@@ -128,3 +129,6 @@ def _deploy_gunicorn_if_neccessary(source_folder, site_name):
 def _restart_nginx():
     sudo('service nginx reload')
 
+def _restart_gunicorn(site_name):
+    gunicorn_service_name = 'gunicorn-{}.service'.format(site_name)
+    sudo('service {} reload'.format(gunicorn_service_name))
