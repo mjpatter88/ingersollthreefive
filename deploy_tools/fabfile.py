@@ -130,5 +130,5 @@ def _restart_nginx():
     sudo('service nginx reload')
 
 def _restart_gunicorn(site_name):
-    gunicorn_service_name = 'gunicorn-{}.service'.format(site_name)
+    gunicorn_service_name = 'gunicorn-{}'.format(site_name)
     sudo('service {} reload'.format(gunicorn_service_name))
