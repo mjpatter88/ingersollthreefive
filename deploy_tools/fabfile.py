@@ -108,6 +108,8 @@ def _deploy_nginx_if_neccessary(source_folder, site_name, host_name):
         sed(new_config_file, 'SITENAME', site_name)
         sudo('mv {} /etc/nginx/sites-available/'.format(new_config_file))
         sudo('ln -s /etc/nginx/sites-available/{} /etc/nginx/sites-enabled/{}'.format(site_name, site_name))
+    if exists('/etc/nginx/sites-enabled/default'):
+        sudo('rm /etc/nginx/sites-enabled/default')
 
 def _deploy_gunicorn_if_neccessary(source_folder, site_name):
     gunicorn_dir = '/etc/systemd/system/'
