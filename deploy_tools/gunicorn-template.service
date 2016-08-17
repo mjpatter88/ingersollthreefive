@@ -12,7 +12,7 @@ PIDFile=/tmp/SITENAME/pid
 Type=simple
 User=michael
 WorkingDirectory=/home/michael/sites/SITENAME/source/
-ExecStart=/home/michael/.pyenv/versions/SITENAME/bin/gunicorn --bind unix:/tmp/SITENAME.socket superlists.wsgi:application
+ExecStart=/home/michael/.pyenv/versions/SITENAME/bin/gunicorn --bind unix:/tmp/SITENAME.socket SITENAME.wsgi:application
 ExecReload=/bin/kill -s HUP $MAINPID
 ExecStop=/bin/kill -s TERM $MAINPID
 
