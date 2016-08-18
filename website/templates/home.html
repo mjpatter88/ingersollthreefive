@@ -31,15 +31,15 @@
       </div>
       <div class="responsive-menu">
         <p id="menu"><b>MENU</b></p>
-        <p><a href="#home">home</a></p>
-        <p><a href="#amenities">amenities</a></p>
-        <p><a href="#contact">contact</a></p>  
+        <a href="#home"><p>home</p></a>
+        <a href="#amenities"><p>amenities</p></a>
+        <a href="#contact"><p>contact</p></a>  
       </div>
     </div>
 
     <div class="wide-menu">
-        <a href="#home">home</a>
-        <a href="#amenities">amenities</a>
+        <a href="#home">home</a> &bull;
+        <a href="#amenities">amenities</a> &bull;
         <a href="#contact">contact</a>
       </div>
     
@@ -89,6 +89,40 @@
           </p>
           <button type="button"><a href="https://www.google.com/maps/place/541+35th+St,+Des+Moines,+IA+50312/@41.5852519,-93.6651916,19z/data=!4m5!3m4!1s0x87ee9ed4e6c6b1dd:0x6cc04cb5da90622e!8m2!3d41.585751!4d-93.6638119">Google Maps</a></button><br> 
         </div>
+        <div id="contact-form">
+                <ul id="errors" class="">
+                    <li id="info">There were some problems with your form submission:</li>
+                 </ul>
+
+                    <p id="success">Thanks for your response!</p>
+
+                    <form method="post" action="process.php">
+                        <p><b>Name(s) of those responding:</b></p>
+                        <input type="text" id="name" name="name" value="" required="required" autofocus="autofocus" />
+
+                        
+                        <p><b>Response:</b></p>
+                        <select id="response" name="response" required="required">
+                            <option value="accept">Accepts with pleasure</option>
+                            <option value="decline">Declines with regret</option>
+                        </select>
+                        
+                        <!--<p><b>Number attending:</b></p>
+                        <input type="number" id="number" name="number" value="" required="required" />
+                        -->
+
+                        <p><b>Phone #:</b></p>
+                        <input type="tel" id="phone" name="phone" value="" required="required" />
+
+
+                        <p><b>Comments:</b></p>
+                        <textarea id="comments" name="comments" placeholder="Do you have any additional comments?"></textarea>
+
+                        <input type="hidden" value="1" name="iowa" />
+
+                        <input type="submit" value="Submit" id="submit-button" />
+                    </form>
+                </div>
       </div>
     </div>
 
