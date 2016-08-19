@@ -202,9 +202,10 @@ button a:link, a:visited a:hover{
 }
 
 #container-amenities{
-  top: 43%; 
-  right: 60%;
+  top: 42%; 
+  right: 57%;
   color: gray;
+  width: 115px;
 }
 
 #container-amenities ul{
@@ -232,10 +233,6 @@ button a:link, a:visited a:hover{
   z-index: 1;
 }
 
-#container-contact h1{
-  margin-left: -5px;
-}
-
 #container-contact p{
   font-family:'pavanam', sans-serif;
   font-size: 1em;  
@@ -245,21 +242,8 @@ button a:link, a:visited a:hover{
   padding: 0;
 }
 
-#container-contact-text button{
-  border: 1.7px solid gray;
-}
-
-#container-contact-text button:hover{
-  background-color: gray;
-  color: white;
-}
-
-#container-contact-text a:link, a:visited{
-  color:gray;
-}
-
 #contact-form {
-  top: 15px;
+  top: 5px;
   width:100%;
   position:relative;
   font-family: 'pavanam', sans-serif;
@@ -306,14 +290,14 @@ input:required, textarea:required {
 }
 
 #contact-form #submit-button {
-  margin-top: 2%;;
+  margin-top: 1%;;
   display: inline;
-  background: rgba(0,0,0,0);
-  border-radius: 25px;
-  padding-left: 10px;
-  padding-right: 10px;
+  background: gray;
   font-family: 'pavanam',sans-serif;
-  width: 70px;
+  width: 100%;
+  font-size: 1.1em;
+  margin-bottom: 12%;
+  color: white;
 }
  
 #contact-form #submit-button:hover {
@@ -332,6 +316,20 @@ input:required, textarea:required {
 
 #success {
     display: none;
+}
+
+
+#container-contact-text button{
+  border: 1.7px solid gray;
+}
+
+#container-contact-text button:hover{
+  background-color: gray;
+  color: white;
+}
+
+#container-contact-text a:link, a:visited{
+  color:gray;
 }
 
 #second-image {
@@ -367,6 +365,12 @@ input:required, textarea:required {
     font-size: 1.3em; 
  }
   
+  #container-amenities{
+    top: 43%;
+    width: 150px;
+    right: 54%;
+  }
+  
   #container-amenities ul {
     font-size: 1.2em;
   }
@@ -397,6 +401,8 @@ input:required, textarea:required {
 
   #container-amenities{
     top:44%;
+    right:53%;
+    width: 180px;
   }
   
   #container-amenities ul {
@@ -455,7 +461,7 @@ input:required, textarea:required {
   
   #container-amenities{
     top:35%;
-    right:61%;
+    right:55%;
   }
   
   #container-amenities ul {
@@ -504,6 +510,7 @@ input:required, textarea:required {
   
   #container-amenities{
     top:37%;
+    right: 56%;
   }
   
   #container-contact{
@@ -533,7 +540,7 @@ input:required, textarea:required {
   }
   
   #container-amenities{
-    top:37%;
+    right:59%;
   }
   
   #container-contact{
@@ -568,7 +575,7 @@ input:required, textarea:required {
   
   #container-amenities{
     top: 39%;
-    right:62%;
+    right:60%;
   }
 }
 
@@ -599,6 +606,11 @@ input:required, textarea:required {
     margin-top: 65px;
  }
   
+  #container-amenities{
+    right:56.5%;
+    width: 250px;
+  }
+  
   #container-amenities ul{
     font-size: 1.6em;
     padding-left: 30px;
@@ -621,6 +633,12 @@ input:required, textarea:required {
   #container-home h2{
     margin-top: 70px;
  }
+  
+  #container-amenities{
+    width:300px;
+    right: 55.5%;
+    top:40%;
+  }
   
   #container-amenities ul{
     font-size: 1.7em;
@@ -651,7 +669,8 @@ input:required, textarea:required {
   }
   
   #container-amenities{
-    top:40%;
+    width: 350px;
+    right: 56%;
   }
   
   #container-amenities ul{
@@ -674,7 +693,8 @@ input:required, textarea:required {
   }
   
   #container-amenities {
-    top:41%;
+    top: 41%;
+    right:57%;
   }
 }
 
@@ -696,6 +716,9 @@ input:required, textarea:required {
     margin-top: 120px;
   }
    
+  #container-amenities {
+    right: 60%;
+  }
 }
 
 @media only screen and (min-width : 1900px){
@@ -716,7 +739,7 @@ input:required, textarea:required {
   }
   
   #container-amenities{
-    top: 42%;
+    top: 41.5%;
   }
 }
 
@@ -741,6 +764,7 @@ input:required, textarea:required {
   
   #container-amenities{
     top: 42.5%;
+    right: 61%;
   }
 }
 
