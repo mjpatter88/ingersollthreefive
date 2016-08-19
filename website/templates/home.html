@@ -77,7 +77,9 @@
     <div class="contact">
       <a name="contact"></a>
       <image class="background-img portrait" id="third-image" src="../static/images/phoneportrait.jpg" />
-      <image class="background-img landscape" id="third-image" src="../static/images/phone2.jpg" />
+      <image class="background-img portrait2" id="third-image" src="../static/images/phoneportrait2.jpg" />
+      <image class="background-img landscape" id="third-image" src="../static/images/phone.jpg" />
+      <image class="background-img landscape2" id="third-image" src="../static/images/phone2.jpg" />
       <div class="content-container" id="container-contact">
         <h1>Contact Us</h1>
             <div id="contact-form">
@@ -89,26 +91,28 @@
 
                     <form method="post" action="process.php">
                         <p>Name:*</p>
-                        <input type="text" id="name" name="name" value="" required="required" />
+                        <input class="field" type="text" id="name" name="name" value="" required="required" />
 
                         <p>Email:*</p>
-                        <input type="text" id="email" name="email" value="" required="required" />
+                        <input class="field" type="text" id="email" name="email" value="" required="required" />
                         
                         <p>Phone #:</p>
-                        <input type="tel" id="phone" name="phone" value="" required="required" />
+                        <input class="field" type="tel" id="phone" name="phone" value="" required="required" />
 
 
                         <p>Comments:</p>
-                        <textarea id="comments" name="comments" ></textarea>
+                        <textarea class="field" id="comments" name="comments" ></textarea>
 
                         <input type="hidden" value="1" name="iowa" />
-
+                        <nobr><p><input type="checkbox" value="digital" id="checkbox"/>Add me to the waiting list</p></nobr>
                         <input type="submit" value="Submit" id="submit-button" />
+                        
+                      
                     </form>
               </div>
-              <div id="container-contact-text"><p>Ingersoll Three Five<br>541 35th St<br>
-            Des Moines, IA 50312<br>
-            Rally Cap Properties<br>515.999.5979<br>
+              <div id="container-contact-text"><p><b>Ingersoll Three Five</b><br>541 35th St<br>
+            Des Moines, IA 50312<br><br>
+            <b>Rally Cap Properties</b><br>515.999.5979<br>
             hello@rallycapproperties.com<br>
               </p>
               <a href="https://www.google.com/maps/place/541+35th+St,+Des+Moines,+IA+50312/@41.5852519,-93.6651916,19z/data=!4m5!3m4!1s0x87ee9ed4e6c6b1dd:0x6cc04cb5da90622e!8m2!3d41.585751!4d-93.6638119"><button type="button">Google Maps</button></a><br> 

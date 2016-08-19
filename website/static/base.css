@@ -29,17 +29,17 @@ body {
 
 
 .mobile-nav{
-  background: whitesmoke;
+  background-color: gray;
   position: fixed;
   width: 100%; 
   z-index: 98;
-  height: 43px;
+  height: 47px;
 }
 
 .menu-btn{
   position: absolute;
   width: 19px;
-  padding:10px 6px 0px 0px;
+  padding:12px 6px 0px 0px;
   right: 15px;
   z-index: 99;
 }
@@ -49,18 +49,18 @@ body {
 	width: 19px;
 	height: 3px;
 	margin-top: 4px;
-	background: rgb(150,150,150);
+	background: whitesmoke;
   
   }
 
 #menu{
   border-bottom-style: solid;
   border-width: 2px;
-  border-color: gray;
+  border-color: whitesmoke;
   margin-bottom: 0;
   padding: 10px;
-  color: gray;
-  background-color: whitesmoke;
+  color: whitesmoke;
+  background-color: gray;
 }
 
 .responsive-menu a:link, a:visited, p {
@@ -78,7 +78,7 @@ body {
 .responsive-menu p {
   border-bottom-style: solid;
   border-width: 2px;
-  border-color: gray;
+  border-color: whitesmoke;
   margin-bottom: 0;
   padding: 8px 0px 8px 15px;
   color: gray;
@@ -88,7 +88,7 @@ body {
 	display: block; 
   text-align: left;
   font-family: "raleway", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.4em;
   background-color: rgba(230,230,230,1);
   position: fixed;
   width:100%;
@@ -118,8 +118,16 @@ h1{
   display: none;
 }
 
+.landscape2{
+  display: none;
+}
+
 .portrait{
   display: block;
+}
+
+.portrait2{
+  display: none;
 }
 
 .content-container{
@@ -130,7 +138,7 @@ h1{
 
 button{
   display: inline;
-  font-size: .9em;
+  font-size: 1em;
   background-color: transparent;
   border-radius: 25px;
   padding-left: 10px;
@@ -166,7 +174,7 @@ button a:link, a:visited a:hover{
  }
 
 #container-home h2{
-  font-size: 1.2em;
+  font-size: 1.3em;
   padding-top: 65px;
   margin-bottom: 5px;
  }
@@ -227,7 +235,7 @@ button a:link, a:visited a:hover{
 
 #container-contact{
   left:45%;
-  top: 5%;
+  top: 8%;
   width: 50%;
   color: gray;
   z-index: 1;
@@ -250,7 +258,9 @@ button a:link, a:visited a:hover{
   text-align: left;   
 }
 
-
+.field{
+  width: 100%;
+}
 
 #contact-form input, 
 #contact-form select, 
@@ -263,7 +273,6 @@ button a:link, a:visited a:hover{
 #contact-form input, 
 #contact-form select, 
 #contact-form textarea {
-  width: 100%;  
   color: gray;
   font-family: sans-serif;
   font-size: .8em;
@@ -280,7 +289,6 @@ button a:link, a:visited a:hover{
   background-color: white;
 }
 
-
 /* Remove box shadow firefox, chrome and opera put around required fields. */
 input:required, textarea:required {
     -moz-box-shadow:none;
@@ -290,22 +298,18 @@ input:required, textarea:required {
 }
 
 #contact-form #submit-button {
-  margin-top: 1%;;
+  margin-top: 8%;;
   display: inline;
   background: gray;
   font-family: 'pavanam',sans-serif;
   width: 100%;
   font-size: 1.1em;
-  margin-bottom: 12%;
+  margin-bottom: 20px;
   color: white;
 }
  
-#contact-form #submit-button:hover {
-  background-color: gray;
-  color: white;
-}
  
-#contact-form #submit-button:active {
+#submit-button:active {
     position:relative;
     top:1px;
 }
@@ -347,8 +351,20 @@ input:required, textarea:required {
 
 }
 
+
+@media only screen and (min-width : 370px){
+  .contact .portrait{
+    display: none;
+  }
+  
+  .contact .portrait2{
+    display: block;
+  }
+}
+
 @media only screen and (min-width : 385px){
- button{
+  
+  button{
     font-size: 1em;
   }
   
@@ -415,6 +431,10 @@ input:required, textarea:required {
 }
   
 @media only screen and (min-width : 540px){
+  .contact .portrait2{
+    display: none;
+  }
+  
   .wide-menu {
   visibility: visible;
   }
@@ -478,9 +498,8 @@ input:required, textarea:required {
     top:10%;
   }
   
-  #container-contact-text{
-    float:right;
-    
+  #container-contact h1{
+    position: absolute;
   }
   
   #container-contact p{
@@ -489,8 +508,18 @@ input:required, textarea:required {
   
   #contact-form{
     float: left;
-    width: 34%;
-    margin-top:20%;
+    width: 45%;
+    margin-top: 20%;
+    padding-right: 20px;
+  }
+  
+  #contact-form #submit-button{
+    font-size: 1.2em;
+  }
+  
+  #container-contact-text{
+    float: left;
+    margin-top: 25%;
   }
   
   #second-image {
@@ -514,7 +543,8 @@ input:required, textarea:required {
   }
   
   #container-contact{
-    left:41%;
+    left:33%;
+    width: 67%
   }
   
   #container-contact p{
@@ -543,10 +573,13 @@ input:required, textarea:required {
     right:59%;
   }
   
-  #container-contact{
-    left:32%;
+  #contact-form{
+    padding-right: 50px;
   }
   
+  #contact-form #submit-button{
+    font-size: 1.3em;
+  }  
 }
 
 @media only screen and (min-width : 800px){
@@ -557,6 +590,15 @@ input:required, textarea:required {
 }
 
 @media only screen and (min-width : 860px){ 
+  .contact .landscape{
+    display: none;
+  }
+  
+  .contact .landscape2{
+    display: block;
+  }
+
+  
   .wide-menu{
     font-size: 1.5em;
   }
@@ -577,6 +619,18 @@ input:required, textarea:required {
     top: 39%;
     right:60%;
   }
+  
+  #contact-form{
+    margin-top: 15%;
+  }
+  
+  #contact-form input #checkbox{
+    padding-right: 5px;
+  }
+  
+  #container-contact-text{
+    margin-top: 19%;
+  }
 }
 
 @media only screen and (min-width : 900px){
@@ -590,6 +644,31 @@ input:required, textarea:required {
   
   #container-home button{
     font-size: 1.2em;
+  }
+  
+  #container-contact{
+    margin-top: -2%;
+    left: 40%;
+    width: 60%;
+  }
+  
+  #container-contact p{
+    padding-top: 7px;
+  }
+  
+  #contact-form input,
+  #contact-form select,
+  #contact-form textarea{
+    font-size: 1.2em;
+  }
+  
+  #contact-form {
+    margin-top: 12%;
+    width: 55%;
+  }
+  
+  #contact-form #submit-button{
+    font-size: 1.4em;
   }
 }
 
@@ -643,6 +722,10 @@ input:required, textarea:required {
   #container-amenities ul{
     font-size: 1.7em;
     padding-left: 40px;
+  }
+  
+  #contact-form #submit-button{
+    font-size: 1.6em;
   }
 }
 
