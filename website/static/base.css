@@ -629,7 +629,7 @@ input:required, textarea:required {
   }
   
   #container-contact-text{
-    margin-top: 19%;
+    margin-top: 18%;
   }
 }
 
@@ -665,6 +665,10 @@ input:required, textarea:required {
   #contact-form {
     margin-top: 12%;
     width: 55%;
+  }
+  
+  #container-contact-text {
+    margin-top: 17%;
   }
   
   #contact-form #submit-button{
@@ -756,8 +760,20 @@ input:required, textarea:required {
     right: 56%;
   }
   
-  #container-amenities ul{
-    font-size: 2.2em;
+  #container-amenities li{
+    margin-top: 20px;
+  }
+  
+  #container-contact p {
+    padding-top: 15px;
+  }
+  
+  #contact-form{
+    margin-top: 15%;
+  }
+  
+  #container-contact-text{
+    margin-top: 18%;
   }
 }
 
@@ -778,6 +794,14 @@ input:required, textarea:required {
   #container-amenities {
     top: 41%;
     right:57%;
+  }
+  
+  #contact-form{
+    margin-top: 12%;
+  }
+  
+  #container-contact-text{
+    margin-top: 15%;
   }
 }
 
