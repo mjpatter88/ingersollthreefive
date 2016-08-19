@@ -33,13 +33,13 @@ body {
   position: fixed;
   width: 100%; 
   z-index: 98;
-  height: 50px;
+  height: 43px;
 }
 
 .menu-btn{
   position: absolute;
   width: 19px;
-  padding:13px 6px 0px 0px;
+  padding:10px 6px 0px 0px;
   right: 15px;
   z-index: 99;
 }
@@ -80,7 +80,7 @@ body {
   border-width: 2px;
   border-color: gray;
   margin-bottom: 0;
-  padding: 10px 0px 10px 15px;
+  padding: 8px 0px 8px 15px;
   color: gray;
 }
 
@@ -88,7 +88,7 @@ body {
 	display: block; 
   text-align: left;
   font-family: "raleway", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
   background-color: rgba(230,230,230,1);
   position: fixed;
   width:100%;
@@ -98,6 +98,10 @@ body {
   width: 100%;
   z-index: 1;
   }
+
+a:hover{
+  text-decoration: none;
+}
 
 h1{
   display: inline-block;
@@ -126,15 +130,15 @@ h1{
 
 button{
   display: inline;
-  font-size: .8em;
-  background: rgba(0,0,0,0);
+  font-size: .9em;
+  background-color: transparent;
   border-radius: 25px;
   padding-left: 10px;
   padding-right: 10px;
   font-family: 'pavanam',sans-serif;
 }
 
-button a:link, a:visited{
+button a:link, a:visited a:hover{
   text-decoration: none;
 }
 
@@ -162,13 +166,22 @@ button a:link, a:visited{
  }
 
 #container-home h2{
-  font-size: 1em;
+  font-size: 1.2em;
   padding-top: 65px;
   margin-bottom: 5px;
  }
 
 #container-home button{
-    border: 1.7px solid white;
+  border: 1.7px solid white;
+}
+
+#container-home button:hover{
+  background-color: white;
+  color: gray;
+}
+
+#container-home a:link, a:visited{
+  color: white;
 }
 
 .amenities {
@@ -195,7 +208,7 @@ button a:link, a:visited{
 }
 
 #container-amenities ul{
-  font-family:'marvel', sans-serif;
+  font-family:'pavanam', sans-serif;
   font-size: 1em;
   color: gray;
   z-index: 1;
@@ -214,26 +227,111 @@ button a:link, a:visited{
 #container-contact{
   left:45%;
   top: 5%;
+  width: 50%;
   color: gray;
   z-index: 1;
 }
 
-#container-contact p{
-  font-family:'marvel', sans-serif;
-  font-size: 1em;  
-  text-align: left; 
-  padding-left: 5px;
-  color: gray;
+#container-contact h1{
+  margin-left: -5px;
 }
 
-#container-contact button{
+#container-contact p{
+  font-family:'pavanam', sans-serif;
+  font-size: 1em;  
+  text-align: left; 
+  color: gray;
+  margin: 0;
+  padding: 0;
+}
+
+#container-contact-text button{
   border: 1.7px solid gray;
-  margin-top: 2px;
+}
+
+#container-contact-text button:hover{
+  background-color: gray;
+  color: white;
+}
+
+#container-contact-text a:link, a:visited{
   color:gray;
 }
 
-#container-contact > button > a:link, a:visited{
-  text-decoration: none;
+#contact-form {
+  top: 15px;
+  width:100%;
+  position:relative;
+  font-family: 'pavanam', sans-serif;
+  text-align: left;   
+}
+
+
+
+#contact-form input, 
+#contact-form select, 
+#contact-form textarea, 
+#contact-form label {
+  margin-bottom: 5px;
+    
+}
+
+#contact-form input, 
+#contact-form select, 
+#contact-form textarea {
+  width: 100%;  
+  color: gray;
+  font-family: sans-serif;
+  font-size: .8em;
+  border-color: gray;
+  border-style: solid;
+  border-width: thin;
+  background-color: transparent;
+}
+
+#contact-form input:focus, 
+#contact-form select:focus, 
+#contact-form textarea:focus {
+  border: 1px solid gray;
+  background-color: white;
+}
+
+
+/* Remove box shadow firefox, chrome and opera put around required fields. */
+input:required, textarea:required {
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    -o-box-shadow:none;
+    box-shadow:none;
+}
+
+#contact-form #submit-button {
+  margin-top: 2%;;
+  display: inline;
+  background: rgba(0,0,0,0);
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'pavanam',sans-serif;
+  width: 70px;
+}
+ 
+#contact-form #submit-button:hover {
+  background-color: gray;
+  color: white;
+}
+ 
+#contact-form #submit-button:active {
+    position:relative;
+    top:1px;
+}
+
+#errors {
+    display: none;
+}
+
+#success {
+    display: none;
 }
 
 #second-image {
@@ -365,18 +463,17 @@ button a:link, a:visited{
   }
   
   .contact{
-    margin-top: -17.5%;
+    margin-top: -4.5%;
   }
   
   #container-contact{
+    width: 68%;
     left:32%;
-    top:22%;
+    top:10%;
   }
   
   #container-contact-text{
-    float: right;
-    padding: 10px;
-    margin-top: 22%;
+    float:right;
     
   }
   
@@ -384,18 +481,27 @@ button a:link, a:visited{
     font-size: 1.2em;
   }
   
+  #contact-form{
+    float: left;
+    width: 34%;
+    margin-top:20%;
+  }
+  
   #second-image {
   -webkit-clip-path: polygon(0% 0%, 100% 12%, 100% 100%, 0% 100%);
   }
 
 #third-image {
-  -webkit-clip-path: polygon(0% 20%, 100% 15%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
   
   }
 }
 
 @media only screen and (min-width : 650px){
- 
+  #container-home{
+    margin-top: -43%;
+  }
+  
   #container-amenities{
     top:37%;
   }
@@ -452,8 +558,12 @@ button a:link, a:visited{
     margin-top: -37%;
   }
   
+  #container-home h2{
+    margin-top: 50px;
+  }
+  
   #logo{
-    width: 40%;
+    width: 45%;
   }
   
   #container-amenities{
@@ -464,12 +574,11 @@ button a:link, a:visited{
 
 @media only screen and (min-width : 900px){
    #container-home p{
-    font-size: 1.6em;
+    font-size: 1.5em;
  }
   
   #container-home h2{
     font-size: 1.7em;
-    margin-top: 60px;
  }
   
   #container-home button{
@@ -479,11 +588,15 @@ button a:link, a:visited{
 
 @media only screen and (min-width : 1050px){
   h1{
-    font-size: 2.7em;
+    font-size: 2.8em;
+  }
+  
+  #container-home p{
+    font-size: 1.6em;
   }
   
   #container-home h2{
-    margin-top: 80px;
+    margin-top: 65px;
  }
   
   #container-amenities ul{
@@ -497,8 +610,16 @@ button a:link, a:visited{
     font-size: 3.3em;
   }
   
+  #container-home{
+    margin-top: -34%;
+  }
+  
+  #logo{
+    width:40%;
+  }
+  
   #container-home h2{
-    margin-top: 100px;
+    margin-top: 70px;
  }
   
   #container-amenities ul{
@@ -512,22 +633,21 @@ button a:link, a:visited{
     font-size: 4em;
   }
   
-   #logo{
-    width: 36%;
+  #logo{
+    width: 37%;
   }
   
   #container-home p{
-    font-size: 1.9em;
+    font-size: 1.8em;
   }
   
   #container-home h2{
-    font-size: 2.2em;
-    margin-top: 120px;
+    font-size: 1.9em;
     margin-bottom: 10px;
   }
   
   #container-home button{
-    font-size: 1.7em;
+    font-size: 1.5em;
   }
   
   #container-amenities{
@@ -539,10 +659,18 @@ button a:link, a:visited{
   }
 }
 
+@media only screen and (min-width : 1400px){
+  #container-home h2{
+    margin-top: 100px; 
+  }
+}
+
 @media only screen and (min-width : 1500px){
-  
+  #logo{
+    width: 35%;
+  }
   #container-home{
-    margin-top: -35%;
+    margin-top: -32%;
   }
   
   #container-amenities {
@@ -561,18 +689,30 @@ button a:link, a:visited{
   }
   
   #container-home{
-    margin-top: -32%;
+    margin-top: -31%;
+  }
+  
+  #container-home h2{
+    margin-top: 120px;
   }
    
 }
 
 @media only screen and (min-width : 1900px){
-  #logo{
-    width: 30%;
-  }
-  
   #container-home{
     margin-top: -29%;
+  }
+  
+  #container-home p{
+    font-size: 2em;
+  }
+  
+  #container-home h2{
+    font-size: 2.1em
+  }
+  
+  #container-home button{
+    font-size: 1.7em;
   }
   
   #container-amenities{
@@ -582,7 +722,7 @@ button a:link, a:visited{
 
 @media only screen and (min-width : 2050px){
   #logo{
-    width: 28%;
+    width: 30%;
   }
   
   #container-home h2{
@@ -592,11 +732,11 @@ button a:link, a:visited{
 
 @media only screen and (min-width : 2200px){
   #logo{
-    width: 25%;
+    width: 27%;
   }
   
   #container-home h2{
-   margin-top: 200px;
+   margin-top: 160px;
   }
   
   #container-amenities{
@@ -606,11 +746,11 @@ button a:link, a:visited{
 
 @media only screen and (min-width : 2350px){
   #logo{
-    width: 22%;
+    width: 26%;
   }
   
   #container-home h2{
-   margin-top: 250px;
+   margin-top: 220px;
   }
   
   #container-amenities{
@@ -619,113 +759,6 @@ button a:link, a:visited{
 }
 
 /*contact form*/
-
-#rsvp-container{
-    position: relative;
-    margin-top: 100px;
-    margin-left: 175px;
-    color: rgba(47, 79, 79, 1);
-    width: 540px;
-}
-
-.rsvp-header {
-    font-family: euphoria-script, sans-serif;
-    font-size: 4em;
-
-}
-
-.rsvp-text {
-    font-family: poiret-one, sans-serif;
-    margin-bottom: 30;
-    font-size: 1.3em
-}
-
-
-#contact-form {
-    /*background-color: rgba(255,255,255,0);*/
-    top: 0px;
-    width:50%;
-    position:relative;
-    color: rgba(47, 79, 79, 1);
-    font-family: poiret-one, sans-serif;
-    font-size: 1.3em;
-    text-align: left;   
-}
-
-
-
-#contact-form input, 
-#contact-form select, 
-#contact-form textarea, 
-#contact-form label {
-    font-size:.9em;
-    color: rgba(47, 79, 79, .8);
-    
-}
-
-#contact-form input, 
-#contact-form select, 
-#contact-form textarea {
-    color: rgba(47, 79, 79, .9);
-    font-family: sans-serif;
-    font-size: .8em;
-    border-color: rgba(47, 79, 79, 1);
-    border-style: solid;
-    border-width: thin;
-    background-color: snow;
-    padding: 1 30 1 3;
-}
-
-#contact-form input:focus, 
-#contact-form select:focus, 
-#contact-form textarea:focus {
-    border: 1px solid #000000;
-    background-color: white;
-}
-
-
-/* Remove box shadow firefox, chrome and opera put around required fields. */
-input:required, textarea:required {
-    -moz-box-shadow:none;
-    -webkit-box-shadow:none;
-    -o-box-shadow:none;
-    box-shadow:none;
-}
-
-
-#contact-form p{
-    margin-bottom: 5px;
-    
-}
-
-#contact-form #submit-button {
-    width: 100px;
-    text-align: center;
-    padding: 10;
-    background-color: rgba(47, 79, 79, 1);
-    color:#FFF;
-    border:none;
-    display:block;
-    margin-top: 30px;
-    font-family: poiret-one, sans-serif;
-}
- 
-#contact-form #submit-button:hover {
-    background-color: rgba(47, 79, 79, .8);
-}
- 
-#contact-form #submit-button:active {
-    position:relative;
-    top:1px;
-}
-
-#errors {
-    display: none;
-}
-
-#success {
-    display: none;
-}
 
 /* Normalize placeholder styles */
  
@@ -746,175 +779,6 @@ input.placeholder-text, textarea.placeholder-text  {
     color: rgba(47, 79, 79, .6);
     font-size:.75em;
 }
-
-
-@media only screen and (max-width : 500px){
-    
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    
-}
-
-#home-logo,
-#home-logo-dark
-{
-    height: 57px;
-    margin-left: 10pz;
-    position: absolute;
-    margin-top: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
-#home-logo{
-    visibility: hidden;   
-}
-
-
-
-.custom-wrapper {
-    height: 75px;
-    -webkit-transition: height 0.5s;
-    -moz-transition: height 0.5s;
-    -ms-transition: height 0.5s;
-    transition: height 0.5s;    
-}
-
-.custom-wrapper.open {
-    height: 32em;   
-}
-
-
-.pure-menu-heading {
-    height: 60px;
-    width: 70px;
-}
-
-.pure-menu-item {
-    height: 60px;    
-    }
-
-.pure-menu-link {
-    padding-top: 20px; 
-    height: 50px;
-    color:rgba(47, 79, 79, 1);
-    font-family: poiret-one, sans-serif;
-    font-size: 1.5em;
-    padding-left: 22px;
-    padding-right: 22px;
-}
-
-.pure-menu-link:hover {
-    background: none;
-    text-shadow: 1px 2px rgba(10,10,10,.5)
-}
-
-.pure-menu-link:active {
-    position:relative;
-    top:1px;
-    background: none;   
-}
-
-.pure-menu-link:focus {
-    background: none;   
-}
-
-.custom-toggle {
-    position: absolute;
-    display: block; /* show this only on small screens */
-    top: 0;
-    right: 0; /* "#menu width" */
-    font-size: 10px; /* change this value to increase/decrease button size */
-    z-index: 10;
-    width: 2em;
-    height: auto;
-    padding: 2.1em 1.6em;
-    visibility: hidden;
-    top: 10px;
-}
-
-    
-    .custom-toggle span {
-        position: relative;
-        display: block;
-    }
-
-    .custom-toggle span,
-    .custom-toggle:before,
-    .custom-toggle:after {
-        background-color: white;
-        width: 20px;
-        height: 2px;
-    }
-
-        .custom-toggle:before,
-        .custom-toggle:after {
-            position: absolute;
-            margin-top: -7px;
-            content: " ";
-        }
-
-        .custom-toggle:after {
-            margin-top: 5px;
-        }
-
-@media only screen and (max-width : 1080px){
-    .pure-menu-link {
-        font-size: 2.3vw;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    
-}
-
-
-@media only screen and (max-width: 768px) {
-    #home-logo-dark{
-        visibility: hidden;
-    }
-    #home-logo{
-        visibility: visible;   
-    }
-    
-    .custom-toggle {
-        display: block;
-        visibility: visible;
-  
-    }
-    .custom-wrapper {
-        overflow: hidden;
-        background-color:rgba(47, 79, 79, .4);
-    }
-    
-    .pure-menu-link {
-        color: white;
-        font-size: 1.5em;
-    }
-    
-    #rsvp-container {
-       position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        width: 85%;
-        margin-top: 20px
-    }  
-    
-}
-
-@media only screen and (max-width : 500px){
-    #note{
-        width: 100%;   
-    }
-    
-    .rsvp-text {
-        font-size: 1.2em;
-    }
-    
-}
-
 
 
 

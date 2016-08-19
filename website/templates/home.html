@@ -51,7 +51,7 @@
         <image id="logo" src="../static/images/logo.svg" />
         <p>Modern living in Des Moines' historic district</p>
         <h2>Leasing Spring 2017</h2>
-        <button type="button">Join the Waiting List</button>
+        <a href="#contact"><button type="button">Join the Waiting List</button></a>
         
       </div>
     </div>
@@ -78,18 +78,10 @@
     <div class="contact">
       <a name="contact"></a>
       <image class="background-img portrait" id="third-image" src="../static/images/phoneportrait.jpg" />
-      <image class="background-img landscape" id="third-image" src="../static/images/phone.jpg" />
+      <image class="background-img landscape" id="third-image" src="../static/images/phone2.jpg" />
       <div class="content-container" id="container-contact">
         <h1>Contact Us</h1>
-        <div id="container-contact-text">
-          <p>Ingersoll Three Five<br>541 35th St<br>
-            Des Moines, IA 50312<br>
-            Rally Cap Properties<br>515.999.5979<br>
-            hello@rallycapproperties.com<br>
-          </p>
-          <button type="button"><a href="https://www.google.com/maps/place/541+35th+St,+Des+Moines,+IA+50312/@41.5852519,-93.6651916,19z/data=!4m5!3m4!1s0x87ee9ed4e6c6b1dd:0x6cc04cb5da90622e!8m2!3d41.585751!4d-93.6638119">Google Maps</a></button><br> 
-        </div>
-        <div id="contact-form">
+            <div id="contact-form">
                 <ul id="errors" class="">
                     <li id="info">There were some problems with your form submission:</li>
                  </ul>
@@ -97,32 +89,31 @@
                     <p id="success">Thanks for your response!</p>
 
                     <form method="post" action="process.php">
-                        <p><b>Name(s) of those responding:</b></p>
-                        <input type="text" id="name" name="name" value="" required="required" autofocus="autofocus" />
+                        <p>Name:*</p>
+                        <input type="text" id="name" name="name" value="" required="required" />
 
+                        <p>Email:*</p>
+                        <input type="text" id="email" name="email" value="" required="required" />
                         
-                        <p><b>Response:</b></p>
-                        <select id="response" name="response" required="required">
-                            <option value="accept">Accepts with pleasure</option>
-                            <option value="decline">Declines with regret</option>
-                        </select>
-                        
-                        <!--<p><b>Number attending:</b></p>
-                        <input type="number" id="number" name="number" value="" required="required" />
-                        -->
-
-                        <p><b>Phone #:</b></p>
+                        <p>Phone #:</p>
                         <input type="tel" id="phone" name="phone" value="" required="required" />
 
 
-                        <p><b>Comments:</b></p>
-                        <textarea id="comments" name="comments" placeholder="Do you have any additional comments?"></textarea>
+                        <p>Comments:</p>
+                        <textarea id="comments" name="comments" ></textarea>
 
                         <input type="hidden" value="1" name="iowa" />
 
-                        <input type="submit" value="Submit" id="submit-button" />
+                        <p><input type="submit" value="Submit" id="submit-button" /></p>
                     </form>
-                </div>
+              </div>
+              <div id="container-contact-texxt"><p>Ingersoll Three Five<br>541 35th St<br>
+            Des Moines, IA 50312<br>
+            Rally Cap Properties<br>515.999.5979<br>
+            hello@rallycapproperties.com<br>
+              </p>
+              <a href="https://www.google.com/maps/place/541+35th+St,+Des+Moines,+IA+50312/@41.5852519,-93.6651916,19z/data=!4m5!3m4!1s0x87ee9ed4e6c6b1dd:0x6cc04cb5da90622e!8m2!3d41.585751!4d-93.6638119"><button type="button">Google Maps</button></a><br> 
+           </div>       
       </div>
     </div>
 
