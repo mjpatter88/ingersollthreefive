@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Ingersoll Three Five</title>
 
     <!-- Bootstrap -->
     <link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,6 +33,7 @@
         <p id="menu"><b>MENU</b></p>
         <a href="#home"><p>home</p></a>
         <a href="#amenities"><p>amenities</p></a>
+        <a href="#units"><p>units</p></a>
         <a href="#contact"><p>contact</p></a>  
       </div>
     </div>
@@ -40,6 +41,7 @@
     <div class="wide-menu">
         <a href="#home">home</a> &bull;
         <a href="#amenities">amenities</a> &bull;
+        <a href="#units">units</a> &bull;
         <a href="#contact">contact</a>
       </div>
     
@@ -51,8 +53,7 @@
         <image id="logo" src="../static/images/logo.svg" />
         <p>Modern living in Des Moines' historic district</p>
         <h2>Leasing Spring 2017</h2>
-        <a href="#contact"><button type="button">Join the Waiting List</button></a>
-        
+        <a href="#contact"><button type="button">Join the Waiting List</button></a>   
       </div>
     </div>
     
@@ -61,62 +62,76 @@
       <a name="amenities"></a>
       <image class="background-img portrait" id="second-image" src="../static/images/dogbackgroundportriat.png" />
       <image class="background-img landscape" id="second-image" src="../static/images/dogbackground.png" />
-        <div class="content-container" id="container-amenities">
-          <h1>Amenities</h1>
-          <ul>
-            <li>Pet Friendly</li>
-            <li>On-Site Laundry</li>
-            <li>Historic Location</li>
-            <li>Near Downtown & DMU</li>
+      <div class="content-container" id="container-amenities">
+        <h1>Amenities</h1>
+        <ul>
+          <li>Pet Friendly</li>
+          <li>On-Site Laundry</li>
+          <li>Historic Location</li>
+          <li>Near Downtown & DMU</li>
           </ul>
-        </div>
+      </div>
       <image class="dog portrait" id="second-image" src="../static/images/dogportrait.png" />
       <image class="dog landscape" id="second-image" src="../static/images/dog.png" />
     </div>
     
+    <div class="units">
+      <a name="units"></a>
+      <image class="background-img portrait" id="third-image" src="../static/images/coffeeportrait.jpg"/>
+      <image class="background-img landscape" id="third-image" src="../static/images/coffee.jpg"/>
+      <div class="content-container" id="container-units">
+        <h1>Units</h1>
+        <h2><b>Penthouse</b></h2>
+        <p>(1) Three-bedroom unit, updated and refinished</p>
+        <h2><b>Main Units</b></h2>
+        <p>(4) Two-bedroom units, updated and refinished</p>
+        <h2><b>Lower Level</b></h2>
+        <p>(2) Efficiency units, remodeled with private entries</p>
+      </div>
+    </div>
+    
+    
     <div class="contact">
       <a name="contact"></a>
-      <image class="background-img portrait" id="third-image" src="../static/images/phoneportrait.jpg" />
-      <image class="background-img portrait2" id="third-image" src="../static/images/phoneportrait2.jpg" />
-      <image class="background-img landscape" id="third-image" src="../static/images/phone.jpg" />
-      <image class="background-img landscape2" id="third-image" src="../static/images/phone2.jpg" />
+      <image class="background-img portrait" id="fourth-image" src="../static/images/phoneportrait.jpg" />
+      <image class="background-img portrait2" id="fourth-image" src="../static/images/phoneportrait2.jpg" />
+      <image class="background-img landscape" id="fourth-image" src="../static/images/phone.jpg" />
+      <image class="background-img landscape2" id="fourth-image" src="../static/images/phone2.jpg" />
       <div class="content-container" id="container-contact">
         <h1>Contact Us</h1>
-            <div id="contact-form">
-                <ul id="errors" class="">
-                    <li id="info">There were some problems with your form submission:</li>
-                 </ul>
+          <div id="contact-form">
+            <ul id="errors" class="">
+              <li id="info">There were some problems with your form submission:</li>
+            </ul>
 
-                    <p id="success">Thanks for your response!</p>
+            <p id="success">Thanks for your response!</p>
 
-                    <form method="post" action="process.php">
-                        <p>Name:*</p>
-                        <input class="field" type="text" id="name" name="name" value="" required="required" />
+            <form method="post" action="process.php">
+              <p>Name:*</p>
+              <input class="field" type="text" id="name" name="name" value="" required="required" />
 
-                        <p>Email:*</p>
-                        <input class="field" type="text" id="email" name="email" value="" required="required" />
-                        
-                        <p>Phone #:</p>
-                        <input class="field" type="tel" id="phone" name="phone" value="" required="required" />
+              <p>Email:*</p>
+              <input class="field" type="text" id="email" name="email" value="" required="required" />
+
+              <p>Phone #:</p>
+              <input class="field" type="tel" id="phone" name="phone" value="" required="required" />
 
 
-                        <p>Comments:</p>
-                        <textarea class="field" id="comments" name="comments" ></textarea>
+              <p>Comments:</p>
+              <textarea class="field" id="comments" name="comments" ></textarea>
 
-                        <input type="hidden" value="1" name="iowa" />
-                        <nobr><p><input type="checkbox" value="digital" id="checkbox"/>Add me to the waiting list</p></nobr>
-                        <input type="submit" value="Submit" id="submit-button" />
-                        
-                      
-                    </form>
+              <input type="hidden" value="1" name="iowa" />
+              <nobr><p><input id="checkbox" type="checkbox" value="digital"/>Add me to the waiting list</p></nobr>
+              <input type="submit" value="Submit" id="submit-button" />
+            </form>
               </div>
-              <div id="container-contact-text"><p><b>Ingersoll Three Five</b><br>541 35th St<br>
-            Des Moines, IA 50312<br><br>
-            <b>Rally Cap Properties</b><br>515.999.5979<br>
-            hello@rallycapproperties.com<br>
-              </p>
-              <a href="https://www.google.com/maps/place/541+35th+St,+Des+Moines,+IA+50312/@41.5852519,-93.6651916,19z/data=!4m5!3m4!1s0x87ee9ed4e6c6b1dd:0x6cc04cb5da90622e!8m2!3d41.585751!4d-93.6638119"><button type="button">Google Maps</button></a><br> 
-           </div>       
+                <div id="container-contact-text"><p><b>Ingersoll Three Five</b><br>541 35th St<br>
+                  Des Moines, IA 50312</p>
+                  <a href="https://www.google.com/maps/place/541+35th+St,+Des+Moines,+IA+50312/@41.5852519,-93.6651916,19z/data=!4m5!3m4!1s0x87ee9ed4e6c6b1dd:0x6cc04cb5da90622e!8m2!3d41.585751!4d-93.6638119"><button type="button">Google Maps</button></a><br><br>
+                  <p><b>Rally Cap Properties</b><br>515.999.5979<br>
+                  hello@rallycapproperties.com<br>
+                  </p>
+                         </div>       
       </div>
     </div>
 

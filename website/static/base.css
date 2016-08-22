@@ -106,8 +106,7 @@ a:hover{
 h1{
   display: inline-block;
   font-size: 1.5em;
-  border: 1px gray solid;
-  color: gray;
+  border: 1px solid;
   z-index: 1;
   text-align: center; 
   font-family: 'raleway',sans-serif;
@@ -225,6 +224,36 @@ button a:link, a:visited a:hover{
   padding-left: 22px;
 }
 
+.units{
+  margin-top: -12%;
+}
+
+#container-units{
+  margin-top: -100%;
+  right: 5%;
+  text-align: right;
+  font-family: 'pavanam', sans-serif;
+  display: block;
+  color: white;
+  width: 190px;
+  border-right: solid white 4px;
+  padding-right: 20px;
+}
+
+#container-units h1{
+  margin-top: 0;
+}
+
+#container-units p{
+  margin-bottom: 0;
+  font-size: 1em;
+}
+
+#container-units h2{
+  font-size: 1.3em;
+  margin-bottom: 1px;
+  margin-top: 10px;
+}
 
 .contact {
   position: relative;
@@ -234,7 +263,7 @@ button a:link, a:visited a:hover{
 }
 
 #container-contact{
-  left:45%;
+  left:5%;
   top: 8%;
   width: 50%;
   color: gray;
@@ -256,6 +285,10 @@ button a:link, a:visited a:hover{
   position:relative;
   font-family: 'pavanam', sans-serif;
   text-align: left;   
+}
+
+#checkbox{
+  margin-right: 5px;
 }
 
 .field{
@@ -341,14 +374,12 @@ input:required, textarea:required {
 }
 
 #third-image {
-  -webkit-clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 2%, 100% 0%, 100% 100%, 0% 100%);
   
 }
 
 #fourth-image {
-  -webkit-clip-path: polygon(0% 0%, 100% 110%, 100% 100%, 0% 100%);
-  margin-top: -30%;
-
+  -webkit-clip-path: polygon(0% 0%, 100% 7%, 100% 100%, 0% 100%);
 }
 
 
@@ -359,6 +390,12 @@ input:required, textarea:required {
   
   .contact .portrait2{
     display: block;
+  }
+  
+  #container-units{
+    margin-top: -98%;
+    width: 45%;
+    margin-left: 50%;
   }
 }
 
@@ -387,8 +424,18 @@ input:required, textarea:required {
     right: 54%;
   }
   
-  #container-amenities ul {
+  #container-amenities ul,
+  #container-units p
+  {
     font-size: 1.2em;
+  }
+  
+  #container-units h2{
+    font-size: 1.4em;
+  }
+  
+  #container-units{
+    width: 230px;
   }
   
   #container-contact p{
@@ -421,8 +468,18 @@ input:required, textarea:required {
     width: 180px;
   }
   
-  #container-amenities ul {
+  #container-amenities ul,
+  #container-units p {
     font-size: 1.4em;
+  }
+  
+  #container-units h2{
+    font-size: 1.6em;
+    margin-top: 12px;
+  }
+  
+  #container-units{
+    width: 270px;
   }
   
   #container-contact p{
@@ -476,7 +533,7 @@ input:required, textarea:required {
  }
 
   .amenities{
-    margin-top: -8%;
+    margin-top: -10%;
   }
   
   #container-amenities{
@@ -484,17 +541,27 @@ input:required, textarea:required {
     right:55%;
   }
   
-  #container-amenities ul {
+  #container-amenities ul,
+  #container-units p {
     font-size: 1.4em;
   }
   
+  .units{
+    margin-top: -8%;
+  }
+  
+  #container-units{
+    margin-top: -66%;
+    width: 260px;
+    right: 3%;
+  }
+  
   .contact{
-    margin-top: -4.5%;
+    margin-top: -10%;
   }
   
   #container-contact{
     width: 68%;
-    left:32%;
     top:10%;
   }
   
@@ -523,13 +590,16 @@ input:required, textarea:required {
   }
   
   #second-image {
-  -webkit-clip-path: polygon(0% 0%, 100% 12%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 14%, 100% 100%, 0% 100%);
   }
 
 #third-image {
-  -webkit-clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
-  
+  -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%); 
   }
+  
+#fourth-image {
+  -webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
+  }  
 }
 
 @media only screen and (min-width : 650px){
@@ -542,9 +612,8 @@ input:required, textarea:required {
     right: 56%;
   }
   
-  #container-contact{
-    left:33%;
-    width: 67%
+  #container-units{
+    margin-top: -58%;
   }
   
   #container-contact p{
@@ -573,6 +642,11 @@ input:required, textarea:required {
     right:59%;
   }
   
+  #container-units{
+    margin-top: -52%;
+    right: 5%;
+  }
+  
   #contact-form{
     padding-right: 50px;
   }
@@ -586,7 +660,9 @@ input:required, textarea:required {
   #container-contact p{
     font-size: 1.4em;
   }
-  
+  #container-units{
+    margin-top: -47%;
+  }
 }
 
 @media only screen and (min-width : 860px){ 
@@ -619,7 +695,7 @@ input:required, textarea:required {
     top: 39%;
     right:60%;
   }
-  
+
   #contact-form{
     margin-top: 15%;
   }
@@ -640,15 +716,18 @@ input:required, textarea:required {
   
   #container-home h2{
     font-size: 1.7em;
+    margin-top: 40px;
  }
   
   #container-home button{
     font-size: 1.2em;
   }
   
+  #container-units{
+    margin-top: -45%;
+  }
+  
   #container-contact{
-    margin-top: -2%;
-    left: 40%;
     width: 60%;
   }
   
@@ -694,9 +773,14 @@ input:required, textarea:required {
     width: 250px;
   }
   
-  #container-amenities ul{
+  #container-amenities ul,
+  #container-units p{
     font-size: 1.6em;
     padding-left: 30px;
+  }
+  
+  #container-units{
+    width: 330px;
   }
 }
 
@@ -723,9 +807,19 @@ input:required, textarea:required {
     top:40%;
   }
   
-  #container-amenities ul{
+  #container-amenities ul,
+  #container-units p{
     font-size: 1.7em;
     padding-left: 40px;
+  }
+  
+  #container-units{
+    width: 350px;
+  }
+  
+  #container-units h2{
+    font-size: 1.9em;
+    margin-top: 25px;
   }
   
   #contact-form #submit-button{
@@ -781,14 +875,19 @@ input:required, textarea:required {
   #container-home h2{
     margin-top: 100px; 
   }
+  
+  #container-units{
+    margin-top: -41%;
+  }
 }
 
 @media only screen and (min-width : 1500px){
   #logo{
     width: 35%;
   }
+  
   #container-home{
-    margin-top: -32%;
+    margin-top: -33%;
   }
   
   #container-amenities {
@@ -796,12 +895,16 @@ input:required, textarea:required {
     right:57%;
   }
   
+  #container-units{
+    margin-top: -37%;
+  }
+  
   #contact-form{
     margin-top: 12%;
   }
   
   #container-contact-text{
-    margin-top: 15%;
+    margin-top: 14.5%;
   }
 }
 
@@ -826,11 +929,23 @@ input:required, textarea:required {
   #container-amenities {
     right: 60%;
   }
+  
+  #container-units{
+    margin-top: -32%;
+  }
+  
+  #container-contact{
+    width:50%;
+    left: 17%;
+    margin-top: 5%;
+  }
+  
+
 }
 
 @media only screen and (min-width : 1900px){
   #container-home{
-    margin-top: -29%;
+    margin-top: -30%;
   }
   
   #container-home p{
@@ -847,6 +962,10 @@ input:required, textarea:required {
   
   #container-amenities{
     top: 41.5%;
+  }
+  
+  #container-units{
+    right: 11%;
   }
 }
 
@@ -872,6 +991,14 @@ input:required, textarea:required {
   #container-amenities{
     top: 42.5%;
     right: 61%;
+  }
+  
+  #container-units{
+    margin-top: -29%;
+  }
+  
+    #container-contact-text{
+    margin-top: 14%;
   }
 }
 
