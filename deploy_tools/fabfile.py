@@ -45,6 +45,12 @@ def _install_nginx():
     sudo(command)
 
 
+#
+# After the first deploy, ssh into the box and manually create the db superuser.
+# python manage.py createsuperuser
+#
+# Then 'deploy' again
+
 def deploy():
     site_name = SITE_NAME
     site_folder = '/home/{}/sites/{}'.format(env.user, site_name)
@@ -56,7 +62,7 @@ def deploy():
     _update_settings(source_folder, env.host)
     _update_virtualenv(source_folder, env.user, virtual_env_folder, site_name)
     _update_static_files(source_folder, virtual_env_folder)
-    #_update_database(source_folder, virtual_env_folder)
+    _update_database(source_folder, virtual_env_folder)
 
     _deploy_nginx_if_neccessary(source_folder, site_name, env.host)
     _deploy_gunicorn_if_neccessary(source_folder, site_name)
