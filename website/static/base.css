@@ -25,6 +25,7 @@ body {
   color: whitesmoke;
   background-color: gray;
   z-index: 99;
+  margin-top: -1px;
 }
 
 
@@ -229,7 +230,7 @@ button a:link, a:visited a:hover{
 }
 
 #container-units{
-  margin-top: -95%;
+  margin-top: -92%;
   right: 5%;
   text-align: right;
   font-family: 'pavanam', sans-serif;
@@ -240,6 +241,7 @@ button a:link, a:visited a:hover{
 
 #container-units h1{
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 #container-units p{
@@ -248,7 +250,7 @@ button a:link, a:visited a:hover{
 }
 
 #container-units h2{
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin-bottom: 1px;
   margin-top: 10px;
 }
@@ -396,9 +398,7 @@ input:required, textarea:required {
 
   
   #container-units{
-    margin-top: -92%;
-    width: 47%;
-    margin-left: 50%;
+    margin-top: -86%;
   }
 }
 
@@ -554,7 +554,7 @@ input:required, textarea:required {
   }
   
   #container-units{
-    margin-top: -66%;
+    margin-top: -63%;
     width: 240px;
     right: 5%;
   }
@@ -597,11 +597,11 @@ input:required, textarea:required {
   -webkit-clip-path: polygon(0% 0%, 100% 14%, 100% 100%, 0% 100%);
   }
 
-#third-image {
+  #third-image {
   -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%); 
   }
   
-#fourth-image {
+  #fourth-image {
   -webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
   }  
 }
@@ -901,6 +901,16 @@ input:required, textarea:required {
   #container-contact {
     left: 7%;
   }
+  .units{
+    margin-top: -11%;
+  }
+  #third-image {
+  -webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%); 
+  }
+  
+  #fourth-image {
+  -webkit-clip-path: polygon(0% 0%, 100% 13%, 100% 100%, 0% 100%);
+  }  
 }
 
 @media only screen and (min-width : 1500px){
