@@ -5,7 +5,7 @@ body {
 
 .wide-menu a:link, a:visited {
   text-decoration: none;
-  color: gray;
+  color: whitesmoke;
   padding-left: 2%;
   padding-right: 2%;
 }
@@ -22,8 +22,8 @@ body {
   text-align: center;
   font-family: "raleway", sans-serif;
   font-size: 1.2em;
-  color: gray;
-  background-color: whitesmoke;
+  color: whitesmoke;
+  background-color: gray;
   z-index: 99;
 }
 
@@ -174,7 +174,7 @@ button a:link, a:visited a:hover{
 
 #container-home h2{
   font-size: 1.3em;
-  padding-top: 65px;
+  margin-top: 90px;
   margin-bottom: 5px;
  }
 
@@ -229,15 +229,13 @@ button a:link, a:visited a:hover{
 }
 
 #container-units{
-  margin-top: -100%;
+  margin-top: -95%;
   right: 5%;
   text-align: right;
   font-family: 'pavanam', sans-serif;
   display: block;
   color: white;
-  width: 190px;
-  border-right: solid white 4px;
-  padding-right: 20px;
+  width: 165px;
 }
 
 #container-units h1{
@@ -365,7 +363,7 @@ input:required, textarea:required {
   color: white;
 }
 
-#container-contact-text a:link, a:visited{
+#container-contact-text a:link{
   color:gray;
 }
 
@@ -392,9 +390,14 @@ input:required, textarea:required {
     display: block;
   }
   
+  #container-amenities {
+  top: 43%;
+}
+
+  
   #container-units{
-    margin-top: -98%;
-    width: 45%;
+    margin-top: -92%;
+    width: 47%;
     margin-left: 50%;
   }
 }
@@ -416,10 +419,10 @@ input:required, textarea:required {
 
   #container-home h2{
     font-size: 1.3em; 
+    margin-top: 110px;
  }
   
   #container-amenities{
-    top: 43%;
     width: 150px;
     right: 54%;
   }
@@ -435,7 +438,7 @@ input:required, textarea:required {
   }
   
   #container-units{
-    width: 230px;
+    width: 200px;
   }
   
   #container-contact p{
@@ -457,9 +460,9 @@ input:required, textarea:required {
  }
 
   #container-home h2{
-    font-size: 1.4em;
-    padding-top: 90px;
+    font-size: 1.6em;
     margin-bottom: 10px;
+    margin-top: 130px;
  }
 
   #container-amenities{
@@ -474,12 +477,17 @@ input:required, textarea:required {
   }
   
   #container-units h2{
-    font-size: 1.6em;
-    margin-top: 12px;
+    font-size: 1.5em;
+
   }
   
   #container-units{
-    width: 270px;
+    width: 240px;
+    right: 7%;
+  }
+  
+  #container-contact{
+    left: 7%;
   }
   
   #container-contact p{
@@ -521,14 +529,9 @@ input:required, textarea:required {
   #logo{
     width: 60%;
   }
-  
-  #container-home p{
-    font-size: 1.4em;
- }
 
   #container-home h2{
-    font-size: 1.4em;
-    padding-top: 20px;
+    margin-top: 25px;
     margin-bottom: 5px;
  }
 
@@ -552,8 +555,8 @@ input:required, textarea:required {
   
   #container-units{
     margin-top: -66%;
-    width: 260px;
-    right: 3%;
+    width: 240px;
+    right: 5%;
   }
   
   .contact{
@@ -563,6 +566,7 @@ input:required, textarea:required {
   #container-contact{
     width: 68%;
     top:10%;
+    left: 5%;
   }
   
   #container-contact h1{
@@ -586,7 +590,7 @@ input:required, textarea:required {
   
   #container-contact-text{
     float: left;
-    margin-top: 25%;
+    margin-top: 26%;
   }
   
   #second-image {
@@ -603,8 +607,9 @@ input:required, textarea:required {
 }
 
 @media only screen and (min-width : 650px){
-  #container-home{
-    margin-top: -43%;
+  
+  #container-home h2{
+    margin-top: 50px;
   }
   
   #container-amenities{
@@ -627,15 +632,15 @@ input:required, textarea:required {
   }
 
   #container-home{
-    margin-top: -40%;
+    margin-top: -45%;
+  }
+  
+  #container-home h2{
+    margin-top: 80px;
   }
   
   #logo{
     width: 50%;
-  }
-  
-  #container-home h2{
-    margin-top: 40px;
   }
   
   #container-amenities{
@@ -643,7 +648,7 @@ input:required, textarea:required {
   }
   
   #container-units{
-    margin-top: -52%;
+    margin-top: -50%;
     right: 5%;
   }
   
@@ -654,6 +659,11 @@ input:required, textarea:required {
   #contact-form #submit-button{
     font-size: 1.3em;
   }  
+
+  #container-contact-text{
+    margin-top: 25%;
+  }
+
 }
 
 @media only screen and (min-width : 800px){
@@ -673,18 +683,13 @@ input:required, textarea:required {
   .contact .landscape2{
     display: block;
   }
-
   
   .wide-menu{
     font-size: 1.5em;
   }
   
-  #container-home{
-    margin-top: -37%;
-  }
-  
   #container-home h2{
-    margin-top: 50px;
+    margin-top: 110px;
   }
   
   #logo{
@@ -695,17 +700,18 @@ input:required, textarea:required {
     top: 39%;
     right:60%;
   }
-
+  
+  #container-units{
+    margin-top: -45%;
+  }
+  
   #contact-form{
     margin-top: 15%;
   }
   
-  #contact-form input #checkbox{
-    padding-right: 5px;
-  }
   
   #container-contact-text{
-    margin-top: 18%;
+    margin-top: 19.5%;
   }
 }
 
@@ -716,17 +722,12 @@ input:required, textarea:required {
   
   #container-home h2{
     font-size: 1.7em;
-    margin-top: 40px;
  }
   
   #container-home button{
     font-size: 1.2em;
   }
-  
-  #container-units{
-    margin-top: -45%;
-  }
-  
+    
   #container-contact{
     width: 60%;
   }
@@ -765,7 +766,7 @@ input:required, textarea:required {
   }
   
   #container-home h2{
-    margin-top: 65px;
+    margin-top: 145px;
  }
   
   #container-amenities{
@@ -773,15 +774,18 @@ input:required, textarea:required {
     width: 250px;
   }
   
-  #container-amenities ul,
-  #container-units p{
+  #container-amenities ul{
     font-size: 1.6em;
     padding-left: 30px;
   }
   
   #container-units{
-    width: 330px;
+    margin-top: -43%;
+    width: 270px;
   }
+  
+  #container-units p{
+    font-size: 1.6em;
 }
 
 @media only screen and (min-width : 1150px){
@@ -790,7 +794,7 @@ input:required, textarea:required {
   }
   
   #container-home{
-    margin-top: -34%;
+    margin-top: -40%;
   }
   
   #logo{
@@ -798,7 +802,7 @@ input:required, textarea:required {
   }
   
   #container-home h2{
-    margin-top: 70px;
+    margin-top: 140px;
  }
   
   #container-amenities{
@@ -807,14 +811,14 @@ input:required, textarea:required {
     top:40%;
   }
   
-  #container-amenities ul,
-  #container-units p{
+  #container-amenities ul{
     font-size: 1.7em;
     padding-left: 40px;
   }
   
   #container-units{
-    width: 350px;
+    width: 290px;
+    margin-top: -45%;
   }
   
   #container-units h2{
@@ -822,9 +826,22 @@ input:required, textarea:required {
     margin-top: 25px;
   }
   
+  #container-units p{
+    font-size: 1.7em;
+  }
+  
   #contact-form #submit-button{
     font-size: 1.6em;
   }
+  
+   #contact-form{
+     margin-top: 14.5%;
+  }
+  
+  #container-contact-text{
+    margin-top: 18%;
+  }
+  
 }
 
 @media only screen and (min-width : 1300px){
@@ -843,6 +860,7 @@ input:required, textarea:required {
   #container-home h2{
     font-size: 1.9em;
     margin-bottom: 10px;
+    margin-top: 160px;
   }
   
   #container-home button{
@@ -858,26 +876,30 @@ input:required, textarea:required {
     margin-top: 20px;
   }
   
+  #container-units{
+    margin-top: -36%;
+    width: 470px;
+    text-align: left;
+    right: 5%;
+  }
+  
+  
   #container-contact p {
     padding-top: 15px;
-  }
-  
-  #contact-form{
-    margin-top: 15%;
-  }
-  
-  #container-contact-text{
-    margin-top: 18%;
   }
 }
 
 @media only screen and (min-width : 1400px){
   #container-home h2{
-    margin-top: 100px; 
+    margin-top: 190px; 
   }
   
   #container-units{
-    margin-top: -41%;
+    right: 7%;
+  }
+  
+  #container-contact {
+    left: 7%;
   }
 }
 
@@ -887,7 +909,7 @@ input:required, textarea:required {
   }
   
   #container-home{
-    margin-top: -33%;
+    margin-top: -39%;
   }
   
   #container-amenities {
@@ -896,7 +918,8 @@ input:required, textarea:required {
   }
   
   #container-units{
-    margin-top: -37%;
+    margin-top: -34%;
+    right: 11%;
   }
   
   #contact-form{
@@ -915,15 +938,15 @@ input:required, textarea:required {
   }
   
   #logo{
-    width: 32%;
+    width: 33%;
   }
   
   #container-home{
-    margin-top: -31%;
+    margin-top: -39%;
   }
   
   #container-home h2{
-    margin-top: 120px;
+    margin-top: 240px;
   }
    
   #container-amenities {
@@ -932,6 +955,7 @@ input:required, textarea:required {
   
   #container-units{
     margin-top: -32%;
+    right: 12%;
   }
   
   #container-contact{
@@ -940,20 +964,26 @@ input:required, textarea:required {
     margin-top: 5%;
   }
   
+  #contact-form{
+    margin-top: 15%;
+  }
+  
+  #container-contact-text{
+    margin-top: 18%;
+  }
 
 }
 
 @media only screen and (min-width : 1900px){
-  #container-home{
-    margin-top: -30%;
-  }
+
   
   #container-home p{
     font-size: 2em;
   }
   
   #container-home h2{
-    font-size: 2.1em
+    font-size: 2.1em;
+    margin-top: 270px;
   }
   
   #container-home button{
@@ -965,40 +995,50 @@ input:required, textarea:required {
   }
   
   #container-units{
-    right: 11%;
+    right: 13%;
   }
 }
 
 @media only screen and (min-width : 2050px){
   #logo{
-    width: 30%;
+    width: 31.5%;
   }
   
   #container-home h2{
-   margin-top: 150px;
+   margin-top: 300px;
   }
+  
+  #container-units{
+    right: 16%;
+  }  
+  
+  #container-contact-text{
+    margin-top: 17.5%;
+  }
+
 }
 
 @media only screen and (min-width : 2200px){
   #logo{
-    width: 27%;
+    width: 29%;
   }
   
   #container-home h2{
-   margin-top: 160px;
+   margin-top: 360px;
   }
   
   #container-amenities{
     top: 42.5%;
     right: 61%;
   }
+ 
   
-  #container-units{
-    margin-top: -29%;
+  #contact-form{
+    margin-top: 12%;
   }
   
-    #container-contact-text{
-    margin-top: 14%;
+  #container-contact-text{
+    margin-top: 14.5%;
   }
 }
 
@@ -1008,12 +1048,21 @@ input:required, textarea:required {
   }
   
   #container-home h2{
-   margin-top: 220px;
+   margin-top: 460px;
   }
   
   #container-amenities{
     top: 43%;
   }
+  
+  #container-units{
+    right: 20%;
+  }
+  
+  #container-contact-text{
+    margin-top: 14%;
+  }
+  
 }
 
 /*contact form*/
