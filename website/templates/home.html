@@ -98,6 +98,15 @@
       <image class="background-img landscape" id="fourth-image" src="../static/images/phone.jpg" />
       <image class="background-img landscape2" id="fourth-image" src="../static/images/phone2.jpg" />
       <div class="content-container" id="container-contact">
+            <!-- The following snippet will center the page on the contact form if it is the result of a submission.
+            -->
+            {% if anchor %}
+                <script type='text/javascript'>
+                    $(document).ready(function(){
+                        window.location = '#{{ anchor }}'
+                    });
+                </script>
+            {% endif %}
         <h1>Contact Us</h1>
           <div id="contact-form">
             <ul id="errors" class="">
