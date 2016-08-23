@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.test import TestCase
 from .models import Contact
+from .views import CONTACT_SUCCESS, NAME_ERROR, EMAIL_ERROR
 
 class HomePageTest(TestCase):
 
@@ -55,22 +56,25 @@ class HomePageTest(TestCase):
         self.assertEqual(Contact.objects.count(), 0)
 
     def test_home_page_POST_passes_errors_to_home_page(self):
-        pass
-        #data = self.new_contact_data.copy()
-        #data['name'] = ''
-        #data['email'] = ''
-        #errors = [NAME_ERROR, EMAIL_ERROR]
+        data = self.new_contact_data.copy()
+        data['name'] = ''
+        data['email'] = ''
 
-        #response = self.client.post('/', data=data, follow=True)
-        #msgs = list(response.context['messages'])
-        #self.assertEqual(msgs[0].message, NAME_ERROR)
-        #self.assertEqual(msgs[0].level, messages.ERROR)
-        #self.assertIn(NAME_TAG, msgs[0].tags)
-        #self.assertEqual(msgs[1].message, EMAIL_ERROR)
-        #self.assertEqual(msgs[1].level, messages.ERROR)
-        #self.assertIn(EMAIL_TAG, msgs[1].tags)
+        response = self.client.post('/', data=data)
+
+        self.assertEqual(response.context['name_error'], NAME_ERROR)
+        self.assertEqual(response.context['email_error'], EMAIL_ERROR)
+        self.assertNotIn('success', response.context)
 
     def test_home_page_POST_passes_success_to_home_page(self):
         response = self.client.post('/', data=self.new_contact_data)
-        self.assertEquals(response.context['success'], True)
+        self.assertEquals(response.context['success'], CONTACT_SUCCESS)
 
+    def test_home_page_POST_passes_form_values_to_home_page(self):
+        response = self.client.post('/', data=self.new_contact_data)
+
+        self.assertEqual(response.context['name_value'], self.test_name)
+        self.assertEqual(response.context['email_value'], self.test_email)
+        self.assertEqual(response.context['phone_value'], self.test_phone)
+        self.assertEqual(response.context['comments_value'], self.test_comments)
+        self.assertEqual(response.context['waiting_list_value'], bool(self.test_waiting_list))

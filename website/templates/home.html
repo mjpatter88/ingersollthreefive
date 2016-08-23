@@ -98,8 +98,8 @@
       <image class="background-img landscape" id="fourth-image" src="../static/images/phone.jpg" />
       <image class="background-img landscape2" id="fourth-image" src="../static/images/phone2.jpg" />
       <div class="content-container" id="container-contact">
-            <!-- The following snippet will center the page on the contact form if it is the result of a submission.
-            -->
+
+            <!-- The following snippet will center the page on the contact form if it is the result of a submission. -->
             {% if anchor %}
                 <script type='text/javascript'>
                     $(document).ready(function(){
@@ -107,38 +107,46 @@
                     });
                 </script>
             {% endif %}
+
         <h1>Contact Us</h1>
-          <div id="contact-form">
-            <ul id="errors" class="">
-              <li id="info">There were some problems with your form submission:</li>
-            </ul>
+        <div id="contact-form">
+            {% if success %}
+                <p id="contact_success">{{ success }}</p>
+            {% else %}
+                <form method="post" action="/">
+                    {% csrf_token %}
+                    <p>Name:* <span class="error">{{ name_error }}</span></p>
+                    <input class="field" type="text" id="name" name="name" value="{{ name_value }}" required="required" />
 
-            <p id="success">Thanks for your response!</p>
+                    <p>Email:* <span class="error">{{ email_error }}</span></p>
+                    <input class="field" type="text" id="email" name="email" value="{{ email_value }}" required="required" />
 
-            <form method="post" action="process.php">
-              <p>Name:*</p>
-              <input class="field" type="text" id="name" name="name" value="" required="required" />
-
-              <p>Email:*</p>
-              <input class="field" type="text" id="email" name="email" value="" required="required" />
-
-              <p>Phone #:</p>
-              <input class="field" type="tel" id="phone" name="phone" value="" required="required" />
+                    <p>Phone #:</p>
+                    <input class="field" type="tel" id="phone" name="phone" value="{{ phone_value }}" required="required" />
 
 
-              <p>Comments:</p>
-              <textarea class="field" id="comments" name="comments" ></textarea>
+                    <p>Comments:</p>
+                    <textarea class="field" id="comments" name="comments" value="">{{ comments_value}}</textarea>
 
-              <input type="hidden" value="1" name="iowa" />
-              <nobr><p><input id="checkbox" type="checkbox" value="digital"/>Add me to the waiting list</p></nobr>
-              <input type="submit" value="Submit" id="submit-button" />
-            </form>
-              </div>
-              <div id="container-contact-text">
-                <p><b>Ingersoll Three Five</b><br>541 35th St<br>Des Moines, IA 50312</p>
-                <a href="https://www.google.com/maps/place/541+35th+St,+Des+Moines,+IA+50312/@41.5852519,-93.6651916,19z/data=!4m5!3m4!1s0x87ee9ed4e6c6b1dd:0x6cc04cb5da90622e!8m2!3d41.585751!4d-93.6638119"><button type="button">Google Maps</button></a><br><br>
-                <p><b>Rally Cap Properties</b><br>515.999.5979<br>hello@rallycapproperties.com<br></p>
-              </div>       
+                    <nobr><p>
+                        <input id="checkbox" name="waiting_list" type="checkbox" value="True"
+                        {% if waiting_list_value%}
+                            checked
+                        {% endif %}
+                        />
+                        Add me to the waiting list</p>
+                    </nobr>
+                    <input type="submit" value="Submit" id="submit-button" />
+                </form>
+            {% endif %}
+        </div>
+
+        <div id="container-contact-text">
+        <p><b>Ingersoll Three Five</b><br>541 35th St<br>Des Moines, IA 50312</p>
+        <a href="https://www.google.com/maps/place/541+35th+St,+Des+Moines,+IA+50312/@41.5852519,-93.6651916,19z/data=!4m5!3m4!1s0x87ee9ed4e6c6b1dd:0x6cc04cb5da90622e!8m2!3d41.585751!4d-93.6638119"><button type="button">Google Maps</button></a><br><br>
+        <p><b>Rally Cap Properties</b><br>515.999.5979<br>hello@rallycapproperties.com<br></p>
+        </div>       
+
       </div>
     </div>
 
