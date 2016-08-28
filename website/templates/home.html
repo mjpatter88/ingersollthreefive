@@ -110,8 +110,8 @@
 
         <h1>Contact Us</h1>
         <div id="contact-form">
-            {% if success %}
-                <p id="contact_success">{{ success }}</p>
+            {% if contact_success %}
+                <p id="contact_success">{{ contact_success }}</p>
             {% else %}
                 <form method="post" action="/">
                     {% csrf_token %}

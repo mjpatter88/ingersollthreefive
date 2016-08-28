@@ -21,12 +21,11 @@ def index(request):
         context['waiting_list_value'] = bool(request.POST.get('waiting_list'))
 
         if _valid_new_contact_input(request.POST, context):
-            context['success'] = CONTACT_SUCCESS
+            context['contact_success'] = CONTACT_SUCCESS
             c = Contact(name=context['name_value'], email=context['email_value'],
                         phone=context['phone_value'], comments=context['comments_value'],
                         waiting_list=context['waiting_list_value'])
             c.save()
-            messages.add_message(request, messages.SUCCESS, CONTACT_SUCCESS)
 
     return render(request, 'home.html', context)
 

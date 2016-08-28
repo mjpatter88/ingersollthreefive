@@ -68,7 +68,7 @@ class HomePageTest(TestCase):
 
     def test_home_page_POST_passes_success_to_home_page(self):
         response = self.client.post('/', data=self.new_contact_data)
-        self.assertEquals(response.context['success'], CONTACT_SUCCESS)
+        self.assertEquals(response.context['contact_success'], CONTACT_SUCCESS)
 
     def test_home_page_POST_passes_form_values_to_home_page(self):
         response = self.client.post('/', data=self.new_contact_data)
@@ -78,3 +78,4 @@ class HomePageTest(TestCase):
         self.assertEqual(response.context['phone_value'], self.test_phone)
         self.assertEqual(response.context['comments_value'], self.test_comments)
         self.assertEqual(response.context['waiting_list_value'], bool(self.test_waiting_list))
+
