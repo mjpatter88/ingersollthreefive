@@ -3,17 +3,16 @@ body {
   background-color: white; 
 }
 
-.wide-menu a:link, a:visited, a:active {
+.wide-menu a:link, a:visited {
   text-decoration: none;
   color: whitesmoke;
   padding-left: 2%;
   padding-right: 2%;
 }
 
-/*.wide-menu a:hover{
+.wide-menu a:hover{
   color: coral;
-  }*/
-
+}
 
 .wide-menu {
   visibility: hidden;
@@ -258,73 +257,6 @@ button a:link, a:visited a:hover{
   margin-top: 10px;
 }
 
-#gallery{
-  border: solid gray 3px;
-}
-
-#container-slideshow{
-   display: none;
-}
-
-#container-slideshow-expand {
-		width:100%;
-    height: 100%;
-		position:absolute;
-    z-index: 100;
-  margin-top: -80%;
-  display: block;
-	}
-
-#container-slideshow ul{
-		width:100%;
-    height: 100%;
-		list-style:none outside none;
-		position:relative;
-		overflow:hidden;
-  padding: 0;
-	}
-
-#container-slideshow li:first-child{
-		display:list-item;
-		position:absolute;
-	}
-
-	#container-slideshow li{
-		position:absolute;
-		display:none;
-	}
-
-#container-slideshow .prevButton{
-		position:absolute;
-		top:50%;
-		margin-top:-37%;
-		z-index:2000;
-		left:0;
-    color: white;
-    padding:10px;
-    text-align: center;
-    font-size: 1.6em;
-	}
-
-#container-slideshow .nextButton{
-		position:absolute;
-		top:50%;
-		margin-top:-37%;
-		z-index:2000;
-		right:0;
-    color: white;
-    padding:10px;
-    text-align: center;
-    font-size: 1.6em;
-	}
-
-#container-slideshow .nextButton:hover, .prevButton:hover{
-  background-color: darkgray;
-}
-
-
-
-
 .contact {
   position: relative;
   width: 100%;
@@ -417,12 +349,8 @@ input:required, textarea:required {
     top:1px;
 }
 
-#errors {
-    display: none;
-}
-
-#success {
-    display: none;
+.error{
+  color: red;
 }
 
 
@@ -796,10 +724,6 @@ input:required, textarea:required {
   
   #container-home button{
     font-size: 1.2em;
-  }
-  
-  #container-units{
-    margin-top: -42%;
   }
     
   #container-contact{
