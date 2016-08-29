@@ -4,8 +4,8 @@ from django.http import HttpResponse
 from .models import Contact
 
 
-NAME_ERROR = "Please enter your name."
-EMAIL_ERROR = "Please enter your email."
+NAME_ERROR = "Required"
+EMAIL_ERROR = "Required"
 CONTACT_SUCCESS = "Thank you for contacting us, we appreciate your interest!"
 CONTACT_ANCHOR = 'contact'
 
