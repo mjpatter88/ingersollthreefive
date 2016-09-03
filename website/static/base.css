@@ -257,7 +257,7 @@ button a:link, a:visited a:hover{
   margin-top: 10px;
 }
 
-.container-slideshow {
+/*.container-slideshow {
   width:90%;
   height: 90%;
   margin-left: 5%;
@@ -311,7 +311,7 @@ button a:link, a:visited a:hover{
 
 .container-slideshow .nextButton:hover, .prevButton:hover{
   background-color: darkgray;
-}
+}*/
 
 .contact {
   position: relative;
