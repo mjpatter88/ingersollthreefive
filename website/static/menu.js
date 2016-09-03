@@ -4,25 +4,18 @@ jQuery(function($){
   })
 })
 
-
 jQuery(function($){
-  $('.responsive-menu p').click(function(){
-      $('.responsive-menu').toggleClass('expand')
-  })
-})
-
-jQuery(function($){
-  $('#gallery').click(function(){
-      $('#container-slideshow').toggleClass('#container-slideshow-expand')
+  $( '.gallery1' ).click(function(){
+      $('.container-slideshow').toggleClass('container-slideshow-expand')
   })
 })
 
 
 $(window).load(function(){
-		var pages = $('#container-slideshow li'), current=0;
+		var pages = $('.container-slideshow li'), current=0;
 		var currentPage,nextPage;
 
-		$('#container-slideshow .button').click(function(){
+		$('.container-slideshow .button').click(function(){
 			currentPage= pages.eq(current);
 			if($(this).hasClass('prevButton'))
 			{
